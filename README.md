@@ -1,6 +1,6 @@
 # Origin Performance International
 
-Coaching profile website for **Emre Çikinci** — former Turkish National Team rower, now elite youth & junior rowing coach at North Palm Beach Rowing Club (NPBRC), South Florida.
+Coaching profile website for **Emre CIKINCI** — former Turkish National Team rower, now elite youth & junior rowing coach at North Palm Beach Rowing Club (NPBRC), South Florida.
 
 **Live site:** https://oariginperformanceinternational.com
 
