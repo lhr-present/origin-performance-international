@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emre Çikinci — Origin Performance International</title>
-    <meta name="description" content="Former Turkish National Team rower turned elite rowing coach. Emre Çikinci — Origin Performance International, South Florida.">
+    <title>Emre Çikinci — Oarigin Performance International</title>
+    <meta name="description" content="Former Turkish National Team rower turned elite rowing coach. Emre Çikinci — Oarigin Performance International, South Florida.">
     <link rel="canonical" href="https://oariginperformanceinternational.com/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://oariginperformanceinternational.com/">
-    <meta property="og:title" content="Emre Çikinci — Origin Performance International">
-    <meta property="og:description" content="Former Turkish National Team rower turned elite rowing coach. Emre Çikinci — Origin Performance International, South Florida.">
+    <meta property="og:title" content="Emre Çikinci — Oarigin Performance International">
+    <meta property="og:description" content="Former Turkish National Team rower turned elite rowing coach. Emre Çikinci — Oarigin Performance International, South Florida.">
     <meta property="og:image" content="https://oariginperformanceinternational.com/images/IMG-20260416-WA0015.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Emre Çikinci — Origin Performance International">
+    <meta name="twitter:title" content="Emre Çikinci — Oarigin Performance International">
     <meta name="twitter:description" content="Former Turkish National Team rower turned elite rowing coach. South Florida.">
     <meta name="twitter:image" content="https://oariginperformanceinternational.com/images/IMG-20260416-WA0015.jpg">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Ccircle cx='50' cy='50' r='22' fill='%23C9F300'/%3E%3C/svg%3E">
@@ -32,7 +32,7 @@
             --accent-dim:   rgba(201,243,0,0.07);
             --accent-glow:  rgba(201,243,0,0.3);
             --text:         #EFEFEF;
-            --text-muted:   #5A5A5A;
+            --text-muted:   #9A9A9A;
             --border:       #191919;
             --border-light: #252525;
             --font-d: 'Unbounded', sans-serif;
@@ -128,8 +128,8 @@
         .hero-photo::after {
             content: '';
             position: absolute; inset: 0;
-            background: linear-gradient(to right, rgba(5,5,5,.92) 45%, rgba(5,5,5,.35) 100%),
-                        linear-gradient(to top, rgba(5,5,5,.9) 0%, transparent 50%);
+            background: linear-gradient(to right, rgba(5,5,5,.96) 42%, rgba(5,5,5,.5) 100%),
+                        linear-gradient(to top, rgba(5,5,5,.95) 0%, rgba(5,5,5,.2) 60%, transparent 100%);
         }
         .hero-grid-overlay {
             position: absolute; inset: 0; z-index: 2;
@@ -283,11 +283,11 @@
         }
         .result-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
         .result-list li { font-size: 12px; color: var(--text-muted); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
-        .medal { flex-shrink: 0; font-size: 11px; font-weight: 700; font-family: var(--font-d); letter-spacing: .05em; }
-        .gold { color: #FFD700; }
-        .silver { color: #C0C0C0; }
-        .bronze { color: #CD7F32; }
-        .place { color: var(--text-muted); }
+        .medal { flex-shrink: 0; font-size: 10px; font-weight: 800; font-family: var(--font-d); letter-spacing: .06em; padding: 3px 8px; min-width: 44px; text-align: center; line-height: 1.4; display: inline-block; }
+        .gold   { background: rgba(255,215,0,.15);  color: #FFD700;  border: 1px solid rgba(255,215,0,.3); }
+        .silver { background: rgba(192,192,208,.12); color: #D0D0D8;  border: 1px solid rgba(192,192,208,.25); }
+        .bronze { background: rgba(205,127,50,.15);  color: #CD9F60;  border: 1px solid rgba(205,127,50,.3); }
+        .place  { background: rgba(255,255,255,.05);  color: #808080;  border: 1px solid rgba(255,255,255,.08); }
 
         /* ── Gallery ── */
         #gallery { border-top: 1px solid var(--border); }
@@ -470,6 +470,27 @@
             color: var(--text-muted); margin-bottom: 28px;
         }
 
+    
+        /* ── Results filter bar ── */
+        .results-filters {
+            display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+            margin-bottom: 32px; padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+        .rf-btn {
+            background: transparent; color: var(--text-muted);
+            border: 1px solid var(--border-light);
+            padding: 8px 18px; font-family: var(--font-b);
+            font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+            cursor: pointer; transition: all .2s;
+        }
+        .rf-btn:hover { color: var(--text); border-color: var(--text-muted); }
+        .rf-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+        .rf-divider { width: 1px; height: 22px; background: var(--border-light); margin: 0 4px; }
+        .year-block.hf { display: none; }
+        .event-card.hf { display: none; }
+        a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
     </style>
 </head>
 <body>
@@ -498,10 +519,10 @@
     <div class="hero-photo"></div>
     <div class="hero-grid-overlay"></div>
     <div class="hero-content">
-        <p class="hero-label">Origin Performance International // Rowing Coach</p>
+        <p class="hero-label">Oarigin Performance International // Rowing Coach</p>
         <h1 class="hero-name">
             Emre<br>Çikinci
-            <span class="sub">Origin Performance<br>International</span>
+            <span class="sub">Oarigin Performance<br>International</span>
         </h1>
         <p class="hero-tagline">
             Former Turkish National Team rower. Elite youth and junior rowing coach based in South Florida. Building champions — on the water and in life.
@@ -575,7 +596,7 @@
                     <p><strong>Emre Çikinci</strong> is a former elite international rower who represented the Turkish National Rowing Team for over a decade, accumulating more than 200 national and international medals across his competitive career. His firsthand experience at the highest levels of the sport — the technical demands, the competitive pressure, and the physical and mental discipline required — forms the foundation of his coaching approach.</p>
                     <p>Now based in South Florida, Emre coaches at the <strong>North Palm Beach Rowing Club (NPBRC)</strong>, where he works with youth and junior athletes across sculling and sweep disciplines. Under his guidance, NPBRC athletes have become consistent podium finishers at the Florida State Rowing Association Championships and USRowing Southeast Youth Championships, with multiple athletes qualifying for and medalling at the <strong>USRowing Youth National Championships</strong>.</p>
                     <p>In 2024, his athletes earned a spot on the <strong>US National Team</strong> for the CanAmex competition, where they won Gold in the Women's Youth 4X — a landmark achievement. Beyond competition results, Emre takes pride in developing athletes who go on to earn <strong>Division I rowing scholarships</strong> at universities across the United States, including the University of Tennessee.</p>
-                    <p>Through <strong>Origin Performance International</strong>, Emre brings his elite background and coaching expertise to athletes worldwide — individually and in groups, in-person and online.</p>
+                    <p>Through <strong>Oarigin Performance International</strong>, Emre brings his elite background and coaching expertise to athletes worldwide — individually and in groups, in-person and online.</p>
                 </div>
                 <ul class="creds">
                     <li>Turkish National Rowing Team — 10+ Years as Elite Competitor</li>
@@ -608,7 +629,7 @@
         <div class="results-years rv">
 
             <!-- 2026 -->
-            <div class="year-block">
+            <div class="year-block" data-year="2026">
                 <div class="year-header open" onclick="toggleYear(this)">
                     <span class="year-num">2026</span>
                     <span class="year-summary">FSRA State Championships</span>
@@ -630,7 +651,7 @@
             </div>
 
             <!-- 2025 -->
-            <div class="year-block">
+            <div class="year-block" data-year="2025">
                 <div class="year-header" onclick="toggleYear(this)">
                     <span class="year-num">2025</span>
                     <span class="year-summary">FSRA States · USRowing SE Youth · Youth Nationals · Speed Order</span>
@@ -685,7 +706,7 @@
             </div>
 
             <!-- 2024 -->
-            <div class="year-block">
+            <div class="year-block" data-year="2024">
                 <div class="year-header" onclick="toggleYear(this)">
                     <span class="year-num">2024</span>
                     <span class="year-summary">FSRA States · USRowing SE Youth · Youth Nationals · CanAmex National Team</span>
@@ -744,7 +765,7 @@
             </div>
 
             <!-- 2023 -->
-            <div class="year-block">
+            <div class="year-block" data-year="2023">
                 <div class="year-header" onclick="toggleYear(this)">
                     <span class="year-num">2023</span>
                     <span class="year-summary">FSRA States · USRowing SE Youth · Youth Nationals · Summer Nationals</span>
@@ -912,7 +933,7 @@
 
 <!-- FOOTER -->
 <footer>
-    <div class="f-logo">Origin<span class="dot">●</span>Performance International</div>
+    <div class="f-logo">Oarigin<span class="dot">●</span>Performance International</div>
     <p class="f-copy">&copy; 2026 Emre Çikinci — oariginperformanceinternational.com</p>
     <ul class="f-nav">
         <li><a href="#about">About</a></li>
@@ -1088,6 +1109,49 @@ document.getElementById('lightbox').addEventListener('click', e => {
 });
 
 // Contact: mailto link only
+
+// ── Results filter ───────────────────────────────────────
+(function() {
+    const btns = document.querySelectorAll('.rf-btn');
+    const blocks = document.querySelectorAll('.year-block');
+
+    function apply() {
+        const yr = document.querySelector('.rf-btn[data-filter].active')?.dataset.filter || 'all';
+        const med = document.querySelector('.rf-btn[data-medal].active')?.dataset.medal || null;
+        blocks.forEach(b => {
+            const show = yr === 'all' || b.dataset.year === yr;
+            b.classList.toggle('hf', !show);
+            if (show && med) {
+                const hdr = b.querySelector('.year-header');
+                const body = b.querySelector('.year-body');
+                hdr.classList.add('open'); body.classList.add('open');
+                b.querySelectorAll('.event-card').forEach(c => {
+                    const has = med === 'gold'
+                        ? c.querySelector('.medal.gold')
+                        : c.querySelector('.medal.gold,.medal.silver,.medal.bronze');
+                    c.classList.toggle('hf', !has);
+                });
+            } else if (show) {
+                b.querySelectorAll('.event-card').forEach(c => c.classList.remove('hf'));
+            }
+        });
+    }
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (btn.hasAttribute('data-filter')) {
+                document.querySelectorAll('.rf-btn[data-filter]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            } else {
+                const was = btn.classList.contains('active');
+                document.querySelectorAll('.rf-btn[data-medal]').forEach(b => b.classList.remove('active'));
+                if (!was) btn.classList.add('active');
+            }
+            apply();
+        });
+    });
+})();
+
 </script>
 </body>
 </html>
