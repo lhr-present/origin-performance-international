@@ -554,6 +554,13 @@
         .fb-row-2 .ff { background: var(--bg); }
         .fb-divider { height: 1px; background: var(--border); }
         .fb-form .cf-submit { width: 100%; display: block; }
+        .ff-opt {
+            color: var(--text-muted);
+            letter-spacing: .08em;
+            text-transform: none;
+            font-weight: 300;
+            margin-left: 4px;
+        }
 
         .fb-success {
             background: var(--bg); border: 1px solid var(--accent);
@@ -1036,13 +1043,13 @@
         <div class="fb-g">
             <div class="rvl">
                 <p class="fb-lede">
-                    Worked with Emre? Watched a session? Want to share a thought, an experience, or a thank-you? Drop it below — no account, no signup, just your words.
+                    Worked with Emre? Watched a session? Want to share a thought, an experience, or a thank-you? Just type your name and a message — that's it. Everything else is optional.
                 </p>
                 <ul class="fb-bullets">
+                    <li>Just a name and a message — nothing else required</li>
+                    <li>Email and profile picture are entirely optional</li>
                     <li>Open to athletes, parents, fellow coaches, and visitors</li>
-                    <li>Add a profile picture if you want — entirely optional</li>
                     <li>Every message lands directly in Emre's personal inbox</li>
-                    <li>Read and replied to within 48 hours</li>
                 </ul>
             </div>
             <div class="rv">
@@ -1066,21 +1073,15 @@
                         <span class="fb-pic-filename" id="fbPicName"></span>
                     </div>
 
-                    <div class="fb-row-2">
-                        <div class="ff">
-                            <label for="fbFirst">First Name</label>
-                            <input id="fbFirst" type="text" name="first_name" required maxlength="60" autocomplete="given-name">
-                        </div>
-                        <div class="ff">
-                            <label for="fbLast">Last Name</label>
-                            <input id="fbLast" type="text" name="last_name" required maxlength="60" autocomplete="family-name">
-                        </div>
+                    <div class="ff">
+                        <label for="fbName">Your Name</label>
+                        <input id="fbName" type="text" name="name" required maxlength="80" autocomplete="name" placeholder="First name, full name, nickname — whatever you prefer">
                     </div>
 
                     <div class="fb-divider"></div>
                     <div class="ff">
-                        <label for="fbEmail">Email</label>
-                        <input id="fbEmail" type="email" name="email" required maxlength="120" autocomplete="email">
+                        <label for="fbEmail">Email <span class="ff-opt">— optional, only if you want a reply</span></label>
+                        <input id="fbEmail" type="email" name="email" maxlength="120" autocomplete="email">
                     </div>
 
                     <div class="fb-divider"></div>
