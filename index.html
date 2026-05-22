@@ -491,6 +491,98 @@
         .event-card.hf { display: none; }
         a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
+        /* ── Feedback ── */
+        #feedback { border-top: 1px solid var(--border); background: var(--surface); }
+        .fb-g { display: grid; grid-template-columns: 1fr 1.15fr; gap: 72px; align-items: start; }
+        .fb-lede { font-size: 14px; line-height: 1.85; color: var(--text-muted); margin-bottom: 32px; }
+        .fb-bullets { list-style: none; }
+        .fb-bullets li {
+            font-size: 12px; letter-spacing: .07em; color: var(--text-muted);
+            padding: 12px 0; border-bottom: 1px solid var(--border);
+            display: flex; align-items: center; gap: 14px; transition: color .2s;
+        }
+        .fb-bullets li:hover { color: var(--text); }
+        .fb-bullets li::before { content: '◇'; color: var(--accent); flex-shrink: 0; }
+        .fb-form {
+            background: var(--bg); border: 1px solid var(--border);
+            position: relative;
+        }
+        .fb-form::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 2px; background: var(--accent);
+        }
+        .fb-pic-row {
+            display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+            background: var(--bg); padding: 22px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .fb-avatar {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: var(--surface-2); border: 1px solid var(--border-light);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; overflow: hidden;
+            background-size: cover; background-position: center;
+            transition: border-color .2s;
+        }
+        .fb-avatar.has-pic { border-color: var(--accent); }
+        .fb-avatar-ph {
+            font-family: var(--font-d); font-size: 22px;
+            color: var(--accent); letter-spacing: -.02em;
+        }
+        .fb-avatar.has-pic .fb-avatar-ph { display: none; }
+        .fb-pic-meta { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 120px; }
+        .fb-pic-label {
+            font-size: 10px; letter-spacing: .22em; text-transform: uppercase;
+            color: var(--accent);
+        }
+        .fb-pic-help { font-size: 11px; color: var(--text-muted); }
+        .fb-pic-btn {
+            background: transparent; border: 1px solid var(--border-light);
+            color: var(--text-muted); padding: 9px 18px; cursor: pointer;
+            font-family: var(--font-b); font-size: 10px; letter-spacing: .18em;
+            text-transform: uppercase; transition: border-color .2s, color .2s;
+            user-select: none;
+        }
+        .fb-pic-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .fb-pic-input { display: none; }
+        .fb-pic-filename {
+            font-size: 11px; color: var(--text-muted);
+            flex-basis: 100%;
+            overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+        }
+        .fb-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+        .fb-row-2 .ff { background: var(--bg); }
+        .fb-divider { height: 1px; background: var(--border); }
+        .fb-form .cf-submit { width: 100%; display: block; }
+
+        .fb-success {
+            background: var(--bg); border: 1px solid var(--accent);
+            padding: 48px 40px; position: relative; text-align: center;
+        }
+        .fb-success::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 2px; background: var(--accent);
+        }
+        .fb-success-icon {
+            font-family: var(--font-d); font-size: 40px; color: var(--accent);
+            margin-bottom: 18px; line-height: 1;
+        }
+        .fb-success-title {
+            font-family: var(--font-d); font-size: 18px; font-weight: 900;
+            text-transform: uppercase; letter-spacing: .04em; margin-bottom: 14px;
+        }
+        .fb-success-text {
+            font-size: 12px; line-height: 1.8; color: var(--text-muted);
+            max-width: 360px; margin: 0 auto 26px;
+        }
+
+        @media (max-width: 1100px) {
+            .fb-g { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .fb-row-2 { grid-template-columns: 1fr; }
+        }
+
     </style>
 </head>
 <body>
@@ -507,6 +599,7 @@
         <li><a href="#results">Results</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#feedback">Feedback</a></li>
         <li><a href="#contact" class="nav-cta">Work With Me</a></li>
     </ul>
     <div class="hamburger" id="hamburger">
@@ -931,6 +1024,87 @@
     </div>
 </section>
 
+<!-- FEEDBACK -->
+<section id="feedback">
+    <div class="si">
+        <div class="s-head rv">
+            <div>
+                <div class="s-lbl">06 // Feedback</div>
+                <h2 class="s-title">Speak<br>To Emre</h2>
+            </div>
+        </div>
+        <div class="fb-g">
+            <div class="rvl">
+                <p class="fb-lede">
+                    Worked with Emre? Watched a session? Want to share a thought, an experience, or a thank-you? Drop it below — no account, no signup, just your words.
+                </p>
+                <ul class="fb-bullets">
+                    <li>Open to athletes, parents, fellow coaches, and visitors</li>
+                    <li>Add a profile picture if you want — entirely optional</li>
+                    <li>Every message lands directly in Emre's personal inbox</li>
+                    <li>Read and replied to within 48 hours</li>
+                </ul>
+            </div>
+            <div class="rv">
+                <form id="fbForm" class="fb-form"
+                      action="https://formsubmit.co/emrecikinci@gmail.com"
+                      method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_subject" value="New feedback — Oarigin Performance International">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://oariginperformanceinternational.com/?feedback=sent#feedback">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                    <div class="fb-pic-row">
+                        <div class="fb-avatar" id="fbAvatar"><span class="fb-avatar-ph">◎</span></div>
+                        <div class="fb-pic-meta">
+                            <span class="fb-pic-label">Profile Picture</span>
+                            <span class="fb-pic-help">Optional · JPG or PNG, up to 5MB</span>
+                        </div>
+                        <label for="fbPic" class="fb-pic-btn">Choose Image</label>
+                        <input type="file" id="fbPic" name="profile_picture" accept="image/*" class="fb-pic-input">
+                        <span class="fb-pic-filename" id="fbPicName"></span>
+                    </div>
+
+                    <div class="fb-row-2">
+                        <div class="ff">
+                            <label for="fbFirst">First Name</label>
+                            <input id="fbFirst" type="text" name="first_name" required maxlength="60" autocomplete="given-name">
+                        </div>
+                        <div class="ff">
+                            <label for="fbLast">Last Name</label>
+                            <input id="fbLast" type="text" name="last_name" required maxlength="60" autocomplete="family-name">
+                        </div>
+                    </div>
+
+                    <div class="fb-divider"></div>
+                    <div class="ff">
+                        <label for="fbEmail">Email</label>
+                        <input id="fbEmail" type="email" name="email" required maxlength="120" autocomplete="email">
+                    </div>
+
+                    <div class="fb-divider"></div>
+                    <div class="ff">
+                        <label for="fbMessage">Your Feedback</label>
+                        <textarea id="fbMessage" name="message" required maxlength="2000" placeholder="Share your experience, thoughts, or a message for Emre..."></textarea>
+                    </div>
+
+                    <button type="submit" class="cf-submit">Send Feedback →</button>
+                </form>
+
+                <div id="fbSuccess" class="fb-success" style="display:none;">
+                    <div class="fb-success-icon">◎</div>
+                    <h3 class="fb-success-title">Feedback Sent</h3>
+                    <p class="fb-success-text">
+                        Thanks for taking the time. Your message is on its way to Emre — expect a reply within 48 hours.
+                    </p>
+                    <a href="#feedback" id="fbAgain" class="btn-s">Send Another</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
     <div class="f-logo">Oarigin<span class="dot">●</span>Performance International</div>
@@ -939,6 +1113,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#results">Results</a></li>
         <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#feedback">Feedback</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </footer>
@@ -1143,6 +1318,64 @@ document.getElementById('lightbox').addEventListener('click', e => {
             apply();
         });
     });
+})();
+
+// ── Feedback form ────────────────────────────────────────
+(function(){
+    const $pic = document.getElementById('fbPic');
+    const $av  = document.getElementById('fbAvatar');
+    const $name = document.getElementById('fbPicName');
+    if ($pic) {
+        $pic.addEventListener('change', e => {
+            const f = e.target.files[0];
+            if (!f) return;
+            if (f.size > 5 * 1024 * 1024) {
+                alert('Image is over 5MB — please choose a smaller file.');
+                $pic.value = '';
+                return;
+            }
+            $name.textContent = f.name;
+            const reader = new FileReader();
+            reader.onload = ev => {
+                $av.style.backgroundImage = `url(${ev.target.result})`;
+                $av.classList.add('has-pic');
+            };
+            reader.readAsDataURL(f);
+        });
+    }
+
+    // Show success state after FormSubmit redirect
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('feedback') === 'sent') {
+        const form = document.getElementById('fbForm');
+        const ok = document.getElementById('fbSuccess');
+        if (form && ok) {
+            form.style.display = 'none';
+            ok.style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('feedback').scrollIntoView({ behavior: 'smooth' });
+            }, 250);
+        }
+    }
+
+    // "Send Another" — reset form, hide success card
+    const $again = document.getElementById('fbAgain');
+    if ($again) {
+        $again.addEventListener('click', e => {
+            e.preventDefault();
+            const form = document.getElementById('fbForm');
+            const ok = document.getElementById('fbSuccess');
+            form.reset();
+            if ($av) {
+                $av.style.backgroundImage = '';
+                $av.classList.remove('has-pic');
+            }
+            if ($name) $name.textContent = '';
+            ok.style.display = 'none';
+            form.style.display = 'block';
+            history.replaceState(null, '', window.location.pathname + '#feedback');
+        });
+    }
 })();
 
 </script>
