@@ -640,18 +640,21 @@
 
 
 
-        /* ── Brand logo ── */
-        .nav-logo { display: block; line-height: 0; }
-        .nav-logo img { height: 44px; width: auto; display: block; transition: height .3s, opacity .2s; }
-        nav.sc .nav-logo img { height: 36px; }
-        .nav-logo:hover img { opacity: .85; }
-        .f-logo { display: block; line-height: 0; }
-        .f-logo img { width: 190px; height: auto; display: block; opacity: .9; transition: opacity .2s; }
-        .f-logo:hover img { opacity: 1; }
+        /* ── Brand logo (original colours on a white plate) ── */
+        .nav-logo { display: block; line-height: 0; background: #fff; padding: 7px 14px; border-radius: 6px; box-shadow: 0 2px 14px rgba(0,0,0,.35); transition: padding .3s; }
+        .nav-logo img { height: 58px; width: auto; display: block; transition: height .3s; }
+        nav.sc .nav-logo { padding: 5px 11px; }
+        nav.sc .nav-logo img { height: 44px; }
+        .nav-logo:hover { box-shadow: 0 0 0 2px var(--accent), 0 2px 14px rgba(0,0,0,.35); }
+        .f-logo { display: inline-block; line-height: 0; background: #fff; padding: 16px 24px; border-radius: 8px; }
+        .f-logo img { width: 220px; height: auto; display: block; }
         @media (max-width: 768px) {
-            .nav-logo img { height: 36px; }
-            nav.sc .nav-logo img { height: 32px; }
-            .f-logo img { width: 170px; margin: 0 auto; }
+            .nav-logo { padding: 5px 10px; }
+            .nav-logo img { height: 46px; }
+            nav.sc .nav-logo { padding: 4px 9px; }
+            nav.sc .nav-logo img { height: 38px; }
+            .f-logo { margin: 0 auto; }
+            .f-logo img { width: 200px; }
         }
         /* ── Visual QA fixes ── */
         .cursor, .cursor-ring { opacity: 0; }
@@ -723,7 +726,7 @@
 
 <!-- NAV -->
 <nav id="nav">
-    <a href="#hero" class="nav-logo" aria-label="Oarigin Performance International — home"><img src="images/brand/oarigin-mark-light.png" alt="Oarigin Performance International" width="1104" height="503"></a>
+    <a href="#hero" class="nav-logo" aria-label="Oarigin Performance International — home"><img src="images/brand/oarigin-logo-original-hd.png" alt="Oarigin Performance International LLC" width="1112" height="568"></a>
     <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
@@ -1307,7 +1310,7 @@
 
 <!-- FOOTER -->
 <footer>
-    <a href="#hero" class="f-logo" aria-label="Back to top"><img src="images/brand/oarigin-logo-light.png" alt="Oarigin Performance International LLC" width="1104" height="565" loading="lazy"></a>
+    <a href="#hero" class="f-logo" aria-label="Back to top"><img src="images/brand/oarigin-logo-original-hd.png" alt="Oarigin Performance International LLC" width="1112" height="568" loading="lazy"></a>
     <p class="f-copy">&copy; 2026 Oarigin Performance International. All rights reserved.</p>
     <ul class="f-nav">
         <li><a href="#about">About</a></li>
