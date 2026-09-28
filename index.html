@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oarigin Performance International — Rowing Performance Coaching</title>
-    <meta name="description" content="Oarigin Performance International is a rowing performance coaching company in South Florida. Individual, crew and online coaching for youth and junior athletes, plus club consulting.">
+    <meta name="description" content="Rowing performance coaching in South Florida and online. Individual, crew, and online coaching for youth and junior rowers, plus club consulting.">
     <link rel="canonical" href="https://oariginperformanceinternational.com/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://oariginperformanceinternational.com/">
     <meta property="og:title" content="Oarigin Performance International — Rowing Performance Coaching">
-    <meta property="og:description" content="Oarigin Performance International is a rowing performance coaching company in South Florida. Individual, crew and online coaching for youth and junior athletes, plus club consulting.">
+    <meta property="og:description" content="Rowing performance coaching in South Florida and online. Individual, crew, and online coaching for youth and junior rowers, plus club consulting.">
     <meta property="og:site_name" content="Oarigin Performance International">
-    <meta property="og:image" content="https://oariginperformanceinternational.com/images/IMG-20260416-WA0015.jpg">
+    <meta property="og:image" content="https://oariginperformanceinternational.com/images/og.jpg">
+    <meta property="og:image:alt" content="A coach and rower embrace after a race">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Oarigin Performance International — Rowing Performance Coaching">
     <meta name="twitter:description" content="Rowing performance coaching for youth and junior athletes. In person in South Florida, online worldwide.">
-    <meta name="twitter:image" content="https://oariginperformanceinternational.com/images/IMG-20260416-WA0015.jpg">
+    <meta name="twitter:image" content="https://oariginperformanceinternational.com/images/og.jpg">
+    <meta name="twitter:image:alt" content="A coach and rower embrace after a race">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -29,6 +31,7 @@
       "email": "emrecikinci@gmail.com",
       "address": { "@type": "PostalAddress", "addressLocality": "Palm Beach Gardens", "addressRegion": "FL", "addressCountry": "US" },
       "areaServed": "Worldwide",
+      "image": "https://oariginperformanceinternational.com/images/og.jpg",
       "employee": {
         "@type": "Person",
         "name": "Emre Cikinci",
@@ -38,9 +41,10 @@
     }
     </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Ccircle cx='50' cy='50' r='22' fill='%23C9F300'/%3E%3C/svg%3E">
+    <link rel="preload" as="image" href="images/IMG-20260416-WA0015.jpg" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&amp;family=DM+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -67,7 +71,6 @@
             font-size: 14px;
             line-height: 1.65;
             overflow-x: hidden;
-            cursor: none;
         }
 
         /* ── Cursor ── */
@@ -491,24 +494,6 @@
         }
 
     
-        /* ── Results filter bar ── */
-        .results-filters {
-            display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
-            margin-bottom: 32px; padding-bottom: 24px;
-            border-bottom: 1px solid var(--border);
-        }
-        .rf-btn {
-            background: transparent; color: var(--text-muted);
-            border: 1px solid var(--border-light);
-            padding: 8px 18px; font-family: var(--font-b);
-            font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
-            cursor: pointer; transition: all .2s;
-        }
-        .rf-btn:hover { color: var(--text); border-color: var(--text-muted); }
-        .rf-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
-        .rf-divider { width: 1px; height: 22px; background: var(--border-light); margin: 0 4px; }
-        .year-block.hf { display: none; }
-        .event-card.hf { display: none; }
         a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
         /* ── Feedback ── */
@@ -564,7 +549,9 @@
             user-select: none;
         }
         .fb-pic-btn:hover { border-color: var(--accent); color: var(--accent); }
-        .fb-pic-input { display: none; }
+        .fb-privacy { background: var(--bg); font-size: 10px; line-height: 1.7; color: var(--text-muted); padding: 14px 20px; letter-spacing: .03em; }
+        .fb-pic-input { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; }
+        .fb-pic-row:focus-within .fb-pic-btn { outline: 2px solid var(--accent); outline-offset: 3px; }
         .fb-pic-filename {
             font-size: 11px; color: var(--text-muted);
             flex-basis: 100%;
@@ -617,8 +604,8 @@
         .svc:hover { background: var(--surface-2); }
         .svc-n { font-family: var(--font-d); font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: .2em; margin-bottom: 22px; }
         .svc-t { font-family: var(--font-d); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 14px; line-height: 1.4; }
-        .svc-d { font-size: 12px; line-height: 1.8; color: var(--text-muted); }
-        .svc-for { margin-top: auto; padding-top: 22px; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--text-muted); border-top: 1px solid var(--border-light); margin-top: 26px; }
+        .svc-d { font-size: 12px; line-height: 1.8; color: var(--text-muted); margin-bottom: 26px; }
+        .svc-for { margin-top: auto; padding-top: 22px; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--text-muted); border-top: 1px solid var(--border-light); }
         .svc-for b { color: var(--accent); font-weight: 400; }
 
         /* ── Team ── */
@@ -635,7 +622,6 @@
         .team-body .creds { margin-top: 26px; }
         .team-link { display: inline-block; margin-top: 26px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 3px; }
         .team-link:hover { color: var(--text); border-color: var(--text); }
-        .results-note { font-size: 11px; color: var(--text-muted); letter-spacing: .04em; margin-top: 22px; line-height: 1.8; }
         @media (max-width: 1100px) {
             .services { grid-template-columns: repeat(2,1fr); }
             .team-card { grid-template-columns: 1fr; }
@@ -647,6 +633,67 @@
         @media (max-width: 768px) {
             .services { grid-template-columns: 1fr; }
             .team-body { padding: 32px 24px; }
+        }
+
+
+        /* ── Visual QA fixes ── */
+        .cursor, .cursor-ring { opacity: 0; }
+        body.cur-on .cursor, body.cur-on .cursor-ring { opacity: 1; }
+        .year-header { gap: 24px; }
+        .events-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .about-g .rvl { position: sticky; top: 100px; }
+        .g-more { display: block; margin: 40px auto 0; }
+        .gallery-grid.collapsed .g-item:nth-child(n+13) { display: none; }
+        .lb-nav { background: rgba(0,0,0,.55); color: var(--text); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 0; }
+        @media (max-width: 1100px) {
+            .pillar:last-child { grid-column: 1 / -1; }
+            .about-g .rvl { position: static; }
+            .about-img { max-width: none; aspect-ratio: 16/10; background-position: center 55%; }
+            .team-img { min-height: 0; aspect-ratio: 16/10; background-position: 20% 35%; }
+        }
+        @media (max-width: 768px) {
+            nav.sc { backdrop-filter: none; background: var(--bg); }
+            .year-header { flex-wrap: wrap; padding: 20px; gap: 8px 24px; }
+            .year-summary { flex-basis: 100%; order: 3; font-size: 10px; }
+            .events-grid { grid-template-columns: 1fr; }
+            .pillar:last-child { grid-column: auto; }
+            .gallery-grid.collapsed .g-item:nth-child(n+9) { display: none; }
+        }
+        @media (max-width: 480px) {
+            .stat { flex: 1 1 50%; padding: 18px 20px; border-bottom: 1px solid var(--border); }
+            .hero-label::before { display: none; }
+            .ec-email { word-break: normal; overflow-wrap: anywhere; font-size: clamp(13px, 4.5vw, 20px); }
+            .email-card { padding: 32px 20px; }
+            .email-card .btn-p { white-space: nowrap; }
+            .lb-nav { top: auto; bottom: 24px; transform: none; }
+        }
+        @media (max-width: 380px) {
+            .s-title { font-size: 26px; overflow-wrap: anywhere; }
+        }
+        @media (min-width: 1101px) {
+            footer { display: grid; grid-template-columns: auto 1fr auto; gap: 32px; }
+            .f-copy { text-align: center; }
+        }
+        /* ── Accessibility ── */
+        .cursor, .cursor-ring { display: none; }
+        @media (hover: hover) and (pointer: fine) {
+            body { cursor: none; }
+            .cursor, .cursor-ring { display: block; }
+            input, textarea, select { cursor: text; }
+        }
+        .ff:focus-within { box-shadow: inset 2px 0 0 var(--accent); }
+        .ff input:focus-visible, .ff textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+        button.year-header { width: 100%; background: none; border: 0; border-bottom: 1px solid var(--border); color: inherit; font: inherit; text-align: left; }
+        button.hamburger { background: none; border: 0; padding: 6px 0; }
+        button.g-item { border: 0; padding: 0; background: none; display: block; width: 100%; }
+        button.lb-close { background: none; border: 0; }
+        button.lb-nav { border: 0; }
+        .no-js .rv, .no-js .rvl, .no-js .hero-label, .no-js .hero-name, .no-js .hero-tagline, .no-js .hero-actions { opacity: 1; transform: none; animation: none; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            .rv, .rvl, .hero-label, .hero-name, .hero-tagline, .hero-actions { opacity: 1 !important; transform: none !important; }
         }
 
     </style>
@@ -666,11 +713,12 @@
         <li><a href="#results">Results</a></li>
         <li><a href="#team">Team</a></li>
         <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#feedback">Feedback</a></li>
         <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
     </ul>
-    <div class="hamburger" id="hamburger">
+    <button type="button" class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
-    </div>
+    </button>
 </nav>
 
 <!-- HERO -->
@@ -684,7 +732,7 @@
             <span class="sub">International</span>
         </h1>
         <p class="hero-tagline">
-            Structured, technically grounded coaching for youth and junior rowers, their families, and their clubs. Built on international competitive experience and a proven championship record in US youth rowing.
+            Structured, technically grounded coaching for youth and junior rowers, their families, and clubs. Built on international competitive experience and a proven championship record in US youth rowing.
         </p>
         <div class="hero-actions">
             <a href="#services" class="btn-p">Our Services</a>
@@ -696,25 +744,29 @@
 <!-- STATS -->
 <div class="stats" id="statsBar">
     <div class="stat">
-        <span class="stat-n" data-target="36">0</span>
-        <span class="stat-l">Championship Medals Since 2023</span>
+        <span class="stat-n" data-target="36" aria-hidden="true">0</span>
+        <span class="sr-only">36</span>
+        <span class="stat-l">Championship Medals, 2023–2026</span>
     </div>
     <div class="stat">
-        <span class="stat-n" data-target="23">0</span>
+        <span class="stat-n" data-target="23" aria-hidden="true">0</span>
+        <span class="sr-only">23</span>
         <span class="stat-l">Gold Medals</span>
     </div>
     <div class="stat">
-        <span class="stat-n" data-target="1">0</span>
+        <span class="stat-n" data-target="1" aria-hidden="true">0</span>
+        <span class="sr-only">1</span>
         <span class="stat-l">CanAmex US National Team Gold</span>
     </div>
     <div class="stat">
-        <span class="stat-n" data-target="10+">0</span>
-        <span class="stat-l">Years National Team Experience on Staff</span>
+        <span class="stat-n" data-target="10+" aria-hidden="true">0</span>
+        <span class="sr-only">10+</span>
+        <span class="stat-l">Years of International Racing Experience</span>
     </div>
 </div>
 
 <!-- MARQUEE -->
-<div class="marquee">
+<div class="marquee" aria-hidden="true">
     <div class="m-track">
         <span class="m-item"><span class="dot">●</span>Youth &amp; Junior Development</span>
         <span class="m-item"><span class="dot">●</span>Sculling &amp; Sweep</span>
@@ -747,21 +799,21 @@
         <div class="about-g">
             <div class="rvl">
                 <div class="about-img" role="img" aria-label="Crew on the podium with medals">
-                    <div class="about-img-tag">South Florida</div>
+                    <div class="about-img-tag">Championship Podium</div>
                 </div>
             </div>
             <div class="rv">
                 <div class="bio">
-                    <p><strong>Oarigin Performance International</strong> is a rowing performance coaching company based in Palm Beach Gardens, Florida. We work with youth and junior athletes, their families, and rowing clubs, individually and in groups, in person and online.</p>
-                    <p>Our coaching combines experience gained at the highest levels of international competition with a structured, athlete-centered development process. We coach across <strong>sculling and sweep</strong> disciplines, with a clear focus on technique, physical preparation, and competitive mindset.</p>
-                    <p>Athletes coached by our staff have become consistent podium finishers at the <strong>Florida State Rowing Association Championships</strong> and the <strong>USRowing Southeast Youth Championships</strong>, have medalled at the <strong>USRowing Youth National Championships</strong>, and in 2024 won Gold for the <strong>US National Team</strong> at CanAmex. Several have gone on to row at <strong>NCAA Division I</strong> programs.</p>
-                    <p>Our goal is simple. We help every athlete reach a level they did not know they could reach, and we prepare them for a long future in the sport.</p>
+                    <p><strong>Oarigin Performance International</strong> is a rowing performance coaching company based in Palm Beach Gardens, Florida. We work with youth and junior athletes, their families, and rowing clubs, offering individual and group coaching in person and online.</p>
+                    <p>Our coaching combines experience gained at the highest levels of international competition with a structured, athlete-centered development process. We coach across <strong>sculling and sweep</strong> disciplines, with a clear focus on technique, physical preparation, and a competitive mindset.</p>
+                    <p>Athletes coached by our staff have become consistent podium finishers at the <strong>Florida State Rowing Association Championships</strong> and the <strong>USRowing Southeast Youth Championships</strong>, have medaled at the <strong>USRowing Youth National Championships</strong>, and in 2024 won Gold for the <strong>US National Team</strong> at CanAmex. Our athletes have also gone on to row at <strong>NCAA Division I</strong> programs, including the University of Tennessee.</p>
+                    <p>Our goal is to help each athlete reach their full potential and to prepare them for a long future in the sport.</p>
                 </div>
                 <ul class="creds">
-                    <li>Coaching staff with 10+ years of international competition experience</li>
+                    <li>Coaching led by a former national team athlete with 10+ years of international competition</li>
                     <li>Youth and junior development across sculling and sweep</li>
-                    <li>Championship results at FSRA, USRowing Southeast Youth and Youth Nationals (2023–2026)</li>
-                    <li>CanAmex US National Team, Women's Youth 4X Gold (2024)</li>
+                    <li>Championship results at the FSRA State Championships (2023–2026), USRowing Southeast Youth, and USRowing Youth Nationals (2023–2025)</li>
+                    <li>CanAmex US National Team, Women's Youth 4x Gold (2024)</li>
                     <li>Athlete placements in NCAA Division I rowing, including the University of Tennessee</li>
                     <li>In-person coaching in South Florida and online coaching worldwide</li>
                 </ul>
@@ -779,14 +831,14 @@
                 <h2 class="s-title">What<br>We Offer</h2>
             </div>
             <p style="max-width:340px;color:var(--text-muted);font-size:12px;line-height:1.85;">
-                Every program is built around the athlete or organization we work with. Contact us to discuss the format that fits your goals.
+                Each program is tailored to the athlete, crew, or club. Contact us to discuss the format that fits your goals.
             </p>
         </div>
         <div class="services rv">
             <div class="svc">
                 <span class="svc-n">01</span>
                 <h3 class="svc-t">Individual Coaching</h3>
-                <p class="svc-d">One-to-one coaching built around the athlete's physiology, technical level, and competition calendar. Clear goals, structured progression, and regular feedback.</p>
+                <p class="svc-d">One-on-one coaching built around the athlete's physiology, technical level, and competition calendar. Clear goals, structured progression, and regular feedback.</p>
                 <p class="svc-for"><b>For</b> · Youth &amp; junior athletes</p>
             </div>
             <div class="svc">
@@ -798,13 +850,13 @@
             <div class="svc">
                 <span class="svc-n">03</span>
                 <h3 class="svc-t">Online Coaching</h3>
-                <p class="svc-d">Remote programming and technical review for athletes anywhere in the world. Training plans, video analysis, and ongoing communication with our coaching staff.</p>
+                <p class="svc-d">Remote programming and technical review for athletes anywhere in the world. Structured training plans, technical feedback, and ongoing communication with our coaching staff.</p>
                 <p class="svc-for"><b>For</b> · Athletes worldwide</p>
             </div>
             <div class="svc">
                 <span class="svc-n">04</span>
                 <h3 class="svc-t">Club Consulting</h3>
-                <p class="svc-d">Support for rowing clubs and programs that want to raise their performance standards. We help with athlete development pathways, training structure, and coaching practice.</p>
+                <p class="svc-d">Support for rowing clubs and programs that want to raise their performance standards. We help with athlete development, training structure, and coaching practice.</p>
                 <p class="svc-for"><b>For</b> · Clubs &amp; programs</p>
             </div>
         </div>
@@ -816,6 +868,7 @@
     <div class="si">
         <div class="rv">
             <div class="s-lbl">03 // Our Approach</div>
+            <h2 class="sr-only">Our Approach</h2>
             <blockquote class="phil-quote">
                 &ldquo;Every athlete has a ceiling they cannot see yet. Our job is to help them <em>break through it</em> — technically, physically, and mentally.&rdquo;
             </blockquote>
@@ -824,7 +877,7 @@
             <div class="pillar">
                 <span class="p-icon">◎</span>
                 <h3 class="p-title">Athlete-First Development</h3>
-                <p class="p-text">Every program is built around the individual: their physiology, their timeline, and their goals. There is no universal template. Understanding each athlete is where our coaching starts.</p>
+                <p class="p-text">Every program is built around the individual: their physiology, timeline, and goals. There is no universal template. Our coaching starts with understanding each athlete.</p>
             </div>
             <div class="pillar">
                 <span class="p-icon">◈</span>
@@ -834,7 +887,7 @@
             <div class="pillar">
                 <span class="p-icon">◇</span>
                 <h3 class="p-title">Long-Term Thinking</h3>
-                <p class="p-text">Results matter, and so does what comes after. Our athletes progress to NCAA Division I programs, national team selection, and a lifelong relationship with the sport. We choose sustainable development over short-term gains.</p>
+                <p class="p-text">Results matter, but so does what comes after. Our athletes have progressed to NCAA Division I programs and US National Team selection, and many build a lifelong relationship with the sport. We prioritize sustainable development over short-term gains.</p>
             </div>
         </div>
     </div>
@@ -849,7 +902,7 @@
                 <h2 class="s-title">Track<br>Record</h2>
             </div>
             <p style="max-width:320px;color:var(--text-muted);font-size:12px;line-height:1.85;">
-                Results achieved by athletes coached by our staff at the North Palm Beach Rowing Club. FSRA State Championships, USRowing Southeast Youth, and USRowing Youth Nationals, 2023 to 2026.
+                Results achieved by athletes coached by our staff at North Palm Beach Rowing Club, including the FSRA State Championships, USRowing Southeast Youth, and USRowing Youth Nationals, 2023–2026.
             </p>
         </div>
 
@@ -857,20 +910,20 @@
 
             <!-- 2026 -->
             <div class="year-block" data-year="2026">
-                <div class="year-header open" onclick="toggleYear(this)">
+                <button type="button" class="year-header open" aria-expanded="true" onclick="toggleYear(this)">
                     <span class="year-num">2026</span>
                     <span class="year-summary">FSRA State Championships</span>
-                    <span class="year-toggle">+</span>
-                </div>
+                    <span class="year-toggle" aria-hidden="true">+</span>
+                </button>
                 <div class="year-body open">
                     <div class="events-grid">
                         <div class="event-card">
-                            <div class="event-name">FSRA Sculling States Championship</div>
+                            <div class="event-name">FSRA State Sculling Championships</div>
                             <ul class="result-list">
-                                <li><span class="medal gold">GOLD</span><span>Boys Freshman 1X</span></li>
-                                <li><span class="medal gold">GOLD</span><span>Boys Freshman 2X</span></li>
-                                <li><span class="medal silver">SILV</span><span>Girls Junior 1X</span></li>
-                                <li><span class="medal silver">SILV</span><span>Girls 1st Varsity 4X</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Boys Freshman 1x</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Boys Freshman 2x</span></li>
+                                <li><span class="medal silver">SILVER</span><span>Girls Junior 1x</span></li>
+                                <li><span class="medal silver">SILVER</span><span>Girls 1st Varsity 4x</span></li>
                             </ul>
                         </div>
                     </div>
@@ -879,53 +932,53 @@
 
             <!-- 2025 -->
             <div class="year-block" data-year="2025">
-                <div class="year-header" onclick="toggleYear(this)">
+                <button type="button" class="year-header" aria-expanded="false" onclick="toggleYear(this)">
                     <span class="year-num">2025</span>
-                    <span class="year-summary">FSRA States · USRowing SE Youth · Youth Nationals · Speed Order</span>
-                    <span class="year-toggle">+</span>
-                </div>
+                    <span class="year-summary">FSRA States · USRowing SE Youth · Youth Nationals · Fall Speed Order</span>
+                    <span class="year-toggle" aria-hidden="true">+</span>
+                </button>
                 <div class="year-body">
                     <div class="events-grid">
                         <div class="event-card">
-                            <div class="event-name">FSRA Sculling States Championship</div>
+                            <div class="event-name">FSRA State Sculling Championships</div>
                             <ul class="result-list">
-                                <li><span class="medal silver">SILV</span><span>Boys Freshman 1X</span></li>
-                                <li><span class="medal gold">GOLD</span><span>Girls Freshman 2X</span></li>
-                                <li><span class="medal bronze">BRNZ</span><span>Girls Junior 1X</span></li>
-                                <li><span class="medal silver">SILV</span><span>Girls Lightweight 2X</span></li>
-                                <li><span class="medal gold">GOLD</span><span>Girls 1st Varsity 4X</span></li>
+                                <li><span class="medal silver">SILVER</span><span>Boys Freshman 1x</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Girls Freshman 2x</span></li>
+                                <li><span class="medal bronze">BRONZE</span><span>Girls Junior 1x</span></li>
+                                <li><span class="medal silver">SILVER</span><span>Girls Lightweight 2x</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Girls 1st Varsity 4x</span></li>
                             </ul>
                         </div>
                         <div class="event-card">
-                            <div class="event-name">FSRA Sweep States Championship</div>
+                            <div class="event-name">FSRA State Sweep Championships</div>
                             <ul class="result-list">
-                                <li><span class="medal bronze">BRNZ</span><span>Girls 2-</span></li>
-                                <li><span class="medal silver">SILV</span><span>Girls 2nd Varsity 4+</span></li>
+                                <li><span class="medal bronze">BRONZE</span><span>Girls 2-</span></li>
+                                <li><span class="medal silver">SILVER</span><span>Girls 2nd Varsity 4+</span></li>
                                 <li><span class="medal gold">GOLD</span><span>Girls 1st Varsity 4+</span></li>
                             </ul>
                         </div>
                         <div class="event-card">
                             <div class="event-name">USRowing SE Youth Championships</div>
                             <ul class="result-list">
-                                <li><span class="medal place">4th</span><span>Womens Youth 1x — Qualified for Youth Nationals</span></li>
-                                <li><span class="medal gold">GOLD</span><span>Womens Youth 4x — Qualified for Youth Nationals</span></li>
-                                <li><span class="medal place">4th</span><span>Mens U17 1x — Qualified for Youth Nationals</span></li>
-                                <li><span class="medal gold">GOLD</span><span>Womens U17 2x — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal place">4th</span><span>Women's Youth 1x — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Women's Youth 4x — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal place">4th</span><span>Men's U17 1x — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Women's U17 2x — Qualified for Youth Nationals</span></li>
                             </ul>
                         </div>
                         <div class="event-card">
-                            <div class="event-name">Youth National Championship</div>
+                            <div class="event-name">USRowing Youth National Championships</div>
                             <ul class="result-list">
-                                <li><span class="medal place">6th A Final</span><span>Womens Youth 1x</span></li>
-                                <li><span class="medal place">4th A Final</span><span>Womens Youth 4x</span></li>
-                                <li><span class="medal place">7th B Final</span><span>Mens U17 1x</span></li>
-                                <li><span class="medal place">4th A Final</span><span>Womens U17 2x</span></li>
+                                <li><span class="medal place">6th A Final</span><span>Women's Youth 1x</span></li>
+                                <li><span class="medal place">4th A Final</span><span>Women's Youth 4x</span></li>
+                                <li><span class="medal place">7th B Final</span><span>Men's U17 1x</span></li>
+                                <li><span class="medal place">4th A Final</span><span>Women's U17 2x</span></li>
                             </ul>
                         </div>
                         <div class="event-card">
                             <div class="event-name">USRowing Fall Speed Order</div>
                             <ul class="result-list">
-                                <li><span class="medal place">5th</span><span>Mens Youth 1X</span></li>
+                                <li><span class="medal place">5th</span><span>Men's Youth 1x</span></li>
                             </ul>
                         </div>
                     </div>
@@ -934,57 +987,57 @@
 
             <!-- 2024 -->
             <div class="year-block" data-year="2024">
-                <div class="year-header" onclick="toggleYear(this)">
+                <button type="button" class="year-header" aria-expanded="false" onclick="toggleYear(this)">
                     <span class="year-num">2024</span>
                     <span class="year-summary">FSRA States · USRowing SE Youth · Youth Nationals · CanAmex National Team</span>
-                    <span class="year-toggle">+</span>
-                </div>
+                    <span class="year-toggle" aria-hidden="true">+</span>
+                </button>
                 <div class="year-body">
                     <div class="events-grid">
                         <div class="event-card">
-                            <div class="event-name">FSRA Sculling States Championship</div>
+                            <div class="event-name">FSRA State Sculling Championships</div>
                             <ul class="result-list">
                                 <li><span class="medal gold">GOLD</span><span>Girls Freshman 1x</span></li>
                                 <li><span class="medal gold">GOLD</span><span>Girls Freshman 2x</span></li>
                                 <li><span class="medal gold">GOLD</span><span>Girls Junior 2x</span></li>
                                 <li><span class="medal gold">GOLD</span><span>Girls Lightweight 2x</span></li>
-                                <li><span class="medal silver">SILV</span><span>Boys 1st Varsity 1x</span></li>
-                                <li><span class="medal bronze">BRNZ</span><span>Boys 1st Varsity 1x</span></li>
+                                <li><span class="medal silver">SILVER</span><span>Boys 1st Varsity 1x</span></li>
+                                <li><span class="medal bronze">BRONZE</span><span>Boys 1st Varsity 1x</span></li>
                                 <li><span class="medal gold">GOLD</span><span>Girls 1st Varsity 2x</span></li>
                             </ul>
                         </div>
                         <div class="event-card">
-                            <div class="event-name">FSRA Sweep States Championship</div>
+                            <div class="event-name">FSRA State Sweep Championships</div>
                             <ul class="result-list">
                                 <li><span class="medal gold">GOLD</span><span>Girls 2-</span></li>
-                                <li><span class="medal silver">SILV</span><span>Boys 2-</span></li>
+                                <li><span class="medal silver">SILVER</span><span>Boys 2-</span></li>
                                 <li><span class="medal gold">GOLD</span><span>Girls Junior 4+</span></li>
                             </ul>
                         </div>
                         <div class="event-card">
                             <div class="event-name">USRowing SE Youth Championships</div>
                             <ul class="result-list">
-                                <li><span class="medal gold">GOLD</span><span>Mens Youth 2- — Qualified for Youth Nationals</span></li>
-                                <li><span class="medal silver">SILV</span><span>Womens Youth 2x — Qualified for Youth Nationals</span></li>
-                                <li><span class="medal gold">GOLD</span><span>Womens Youth 4x — Qualified for Youth Nationals</span></li>
-                                <li><span class="medal silver">SILV</span><span>Womens U17 2x — Qualified for Youth Nationals</span></li>
-                                <li><span class="medal place">4th</span><span>Womens U17 1x — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Men's Youth 2- — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal silver">SILVER</span><span>Women's Youth 2x — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Women's Youth 4x — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal silver">SILVER</span><span>Women's U17 2x — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal place">4th</span><span>Women's U17 1x — Qualified for Youth Nationals</span></li>
                             </ul>
                         </div>
                         <div class="event-card">
-                            <div class="event-name">Youth National Championship</div>
+                            <div class="event-name">USRowing Youth National Championships</div>
                             <ul class="result-list">
-                                <li><span class="medal place">7th A Final</span><span>Mens Youth 2-</span></li>
-                                <li><span class="medal place">4th C Final</span><span>Womens Youth 2x</span></li>
-                                <li><span class="medal place">1st C Final</span><span>Womens Youth 4x</span></li>
-                                <li><span class="medal place">4th B Final</span><span>Womens U17 2x</span></li>
-                                <li><span class="medal place">4th C Final</span><span>Womens U17 1x</span></li>
+                                <li><span class="medal place">7th A Final</span><span>Men's Youth 2-</span></li>
+                                <li><span class="medal place">4th C Final</span><span>Women's Youth 2x</span></li>
+                                <li><span class="medal place">1st C Final</span><span>Women's Youth 4x</span></li>
+                                <li><span class="medal place">4th B Final</span><span>Women's U17 2x</span></li>
+                                <li><span class="medal place">4th C Final</span><span>Women's U17 1x</span></li>
                             </ul>
                         </div>
                         <div class="event-card">
-                            <div class="event-name">CanAmex — US National Team 🇺🇸</div>
+                            <div class="event-name">CanAmex — US National Team</div>
                             <ul class="result-list">
-                                <li><span class="medal gold">GOLD</span><span>Women's Youth 4X — National Team</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Women's Youth 4x</span></li>
                             </ul>
                         </div>
                     </div>
@@ -993,22 +1046,22 @@
 
             <!-- 2023 -->
             <div class="year-block" data-year="2023">
-                <div class="year-header" onclick="toggleYear(this)">
+                <button type="button" class="year-header" aria-expanded="false" onclick="toggleYear(this)">
                     <span class="year-num">2023</span>
                     <span class="year-summary">FSRA States · USRowing SE Youth · Youth Nationals · Summer Nationals</span>
-                    <span class="year-toggle">+</span>
-                </div>
+                    <span class="year-toggle" aria-hidden="true">+</span>
+                </button>
                 <div class="year-body">
                     <div class="events-grid">
                         <div class="event-card">
-                            <div class="event-name">FSRA Sculling States Championship</div>
+                            <div class="event-name">FSRA State Sculling Championships</div>
                             <ul class="result-list">
                                 <li><span class="medal gold">GOLD</span><span>Girls Junior 2x</span></li>
                                 <li><span class="medal gold">GOLD</span><span>Girls Varsity 1x</span></li>
                             </ul>
                         </div>
                         <div class="event-card">
-                            <div class="event-name">FSRA Sweep States Championship</div>
+                            <div class="event-name">FSRA State Sweep Championships</div>
                             <ul class="result-list">
                                 <li><span class="medal gold">GOLD</span><span>Girls 1st Varsity 4+</span></li>
                             </ul>
@@ -1016,23 +1069,23 @@
                         <div class="event-card">
                             <div class="event-name">USRowing SE Youth Championships</div>
                             <ul class="result-list">
-                                <li><span class="medal gold">GOLD</span><span>Womens U17 2x — Qualified for Youth Nationals</span></li>
-                                <li><span class="medal silver">SILV</span><span>Womens Youth 1x — Qualified for Youth Nationals</span></li>
-                                <li><span class="medal place">4th</span><span>Womens Youth 4x — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Women's U17 2x — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal silver">SILVER</span><span>Women's Youth 1x — Qualified for Youth Nationals</span></li>
+                                <li><span class="medal place">4th</span><span>Women's Youth 4x — Qualified for Youth Nationals</span></li>
                             </ul>
                         </div>
                         <div class="event-card">
-                            <div class="event-name">Youth National Championship</div>
+                            <div class="event-name">USRowing Youth National Championships</div>
                             <ul class="result-list">
-                                <li><span class="medal gold">GOLD</span><span>Womens U17 2x</span></li>
-                                <li><span class="medal place">6th A Final</span><span>Womens Youth 1x</span></li>
-                                <li><span class="medal place">8th A Final</span><span>Womens Youth 4x</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Women's U17 2x</span></li>
+                                <li><span class="medal place">6th A Final</span><span>Women's Youth 1x</span></li>
+                                <li><span class="medal place">8th A Final</span><span>Women's Youth 4x</span></li>
                             </ul>
                         </div>
                         <div class="event-card">
                             <div class="event-name">USRowing Summer Nationals</div>
                             <ul class="result-list">
-                                <li><span class="medal gold">GOLD</span><span>Woman's Youth 4X</span></li>
+                                <li><span class="medal gold">GOLD</span><span>Women's Youth 4x</span></li>
                             </ul>
                         </div>
                     </div>
@@ -1052,7 +1105,7 @@
                 <h2 class="s-title">Our<br>Coaching Staff</h2>
             </div>
             <p style="max-width:320px;color:var(--text-muted);font-size:12px;line-height:1.85;">
-                Our coaches bring first-hand experience of international competition to every athlete they work with.
+                Our coaching staff brings first-hand international competition experience to every athlete.
             </p>
         </div>
         <div class="team-card rv">
@@ -1061,16 +1114,16 @@
                 <p class="team-role">Rowing Coach</p>
                 <h3 class="team-name">Emre Cikinci</h3>
                 <div class="team-bio">
-                    <p>Emre is a former member of the <strong>Turkish National Rowing Team</strong>, where he competed at elite level for more than ten years and won over 200 national and international medals.</p>
-                    <p>He coaches youth and junior athletes in sculling and sweep at the <strong>North Palm Beach Rowing Club (NPBRC)</strong> in South Florida. He coached the Women's Youth 4X that won Gold for the US National Team at CanAmex in 2024.</p>
+                    <p>Emre is a former member of the <strong>Turkish National Rowing Team</strong>, where he competed at the elite level for more than ten years and won more than 200 national and international medals.</p>
+                    <p>He coaches youth and junior athletes in sculling and sweep at the <strong>North Palm Beach Rowing Club (NPBRC)</strong> in South Florida. He coached the Women's Youth 4x that won Gold for the US National Team at CanAmex in 2024.</p>
                 </div>
                 <ul class="creds">
                     <li>Turkish National Rowing Team, 10+ years as an elite competitor</li>
-                    <li>CanAmex National Team Coach, Women's Youth 4X Gold (2024)</li>
-                    <li>USRowing Youth National Championship medalist coach (2023–2025)</li>
+                    <li>CanAmex US National Team Coach, Women's Youth 4x Gold (2024)</li>
+                    <li>USRowing Youth National Championship medalist coach (2023)</li>
                     <li>FSRA State Championship-winning coach (2023–2026)</li>
                 </ul>
-                <a class="team-link" href="https://www.linkedin.com/in/emrecikinci/" target="_blank" rel="noopener">LinkedIn Profile →</a>
+                <a class="team-link" href="https://www.linkedin.com/in/emrecikinci/" target="_blank" rel="noopener noreferrer">LinkedIn Profile →</a>
             </div>
         </div>
     </div>
@@ -1089,17 +1142,18 @@
             </p>
         </div>
     </div>
-    <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-grid collapsed" id="galleryGrid">
         <!-- Photos populated by JS -->
     </div>
+    <button type="button" class="btn-s g-more" id="gMore" aria-controls="galleryGrid" aria-expanded="false">Show All Photos</button>
 </section>
 
 <!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-    <span class="lb-close" onclick="closeLb()">✕</span>
-    <span class="lb-nav lb-prev" onclick="lbNav(-1)">‹</span>
-    <img id="lbImg" src="" alt="">
-    <span class="lb-nav lb-next" onclick="lbNav(1)">›</span>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button type="button" class="lb-close" id="lbClose" onclick="closeLb()" aria-label="Close">✕</button>
+    <button type="button" class="lb-nav lb-prev" onclick="lbNav(-1)" aria-label="Previous photo">‹</button>
+    <img id="lbImg" alt="">
+    <button type="button" class="lb-nav lb-next" onclick="lbNav(1)" aria-label="Next photo">›</button>
 </div>
 
 <!-- CONTACT -->
@@ -1114,7 +1168,7 @@
         <div class="contact-g">
             <div class="rvl">
                 <p class="contact-lede">
-                    Whether you are an athlete looking for structured coaching, a parent exploring training options, or a club seeking consulting support, we would like to hear from you. Every enquiry is reviewed by our coaching staff.
+                    Whether you are an athlete looking for structured coaching, a parent exploring training options, or a club seeking consulting support, we would be glad to hear from you. Every inquiry is reviewed by our coaching staff.
                 </p>
                 <div class="c-rows">
                     <div class="c-row">
@@ -1142,14 +1196,14 @@
             <div class="rv">
                 <div class="email-card">
                     <div class="ec-label">Enquiries</div>
-                    <a class="ec-email" href="mailto:emrecikinci@gmail.com?subject=Coaching%20Enquiry">
+                    <a class="ec-email" href="mailto:emrecikinci@gmail.com?subject=Coaching%20Inquiry">
                         emrecikinci@gmail.com
                     </a>
                     <div class="ec-divider"></div>
                     <p class="ec-note">
-                        Tell us about the athlete or program, the current level, and the goals you want to reach. We reply to every enquiry within 48 hours.
+                        Tell us about the athlete or program, current level, and goals. We reply to every inquiry within 48 hours.
                     </p>
-                    <a class="btn-p" href="mailto:emrecikinci@gmail.com?subject=Coaching%20Enquiry&body=Hello%20Oarigin%20Performance%20team%2C%0D%0A%0D%0AName%3A%20%0D%0AAge%20%2F%20Level%3A%20%0D%0ACurrent%20club%20(if%20any)%3A%20%0D%0AService%20of%20interest%3A%20%0D%0AGoals%3A%20%0D%0A%0D%0AThank%20you%2C">
+                    <a class="btn-p" href="mailto:emrecikinci@gmail.com?subject=Coaching%20Inquiry&amp;body=Hello%20Oarigin%20Performance%20team%2C%0D%0A%0D%0AName%3A%20%0D%0AAge%20%2F%20Level%3A%20%0D%0ACurrent%20club%20(if%20any)%3A%20%0D%0AService%20of%20interest%3A%20%0D%0AGoals%3A%20%0D%0A%0D%0AThank%20you%2C">
                         Compose Email →
                     </a>
                 </div>
@@ -1170,10 +1224,10 @@
         <div class="fb-g">
             <div class="rvl">
                 <p class="fb-lede">
-                    Have you trained with us, watched a session, or worked with our staff? We welcome your feedback. Only your name and a message are required.
+                    Trained with us, watched a session, or worked with our staff? We welcome your feedback. Only your name and a message are required.
                 </p>
                 <ul class="fb-bullets">
-                    <li>Just a name and a message — nothing else required</li>
+                    <li>No account or sign-up needed</li>
                     <li>Email and profile picture are entirely optional</li>
                     <li>Open to athletes, parents, fellow coaches, and visitors</li>
                     <li>Every message is read by our coaching staff</li>
@@ -1202,7 +1256,7 @@
 
                     <div class="ff">
                         <label for="fbName">Your Name</label>
-                        <input id="fbName" type="text" name="name" required maxlength="80" autocomplete="name" placeholder="First name, full name, nickname — whatever you prefer">
+                        <input id="fbName" type="text" name="name" required maxlength="80" autocomplete="name" placeholder="First name or full name">
                     </div>
 
                     <div class="fb-divider"></div>
@@ -1218,6 +1272,7 @@
                     </div>
 
                     <button type="submit" class="cf-submit">Send Feedback →</button>
+                    <p class="fb-privacy">Messages are delivered through FormSubmit and used only to read and reply to your feedback. Please do not upload photos of minors without a parent or guardian&#39;s consent.</p>
                 </form>
 
                 <div id="fbSuccess" class="fb-success" style="display:none;">
@@ -1242,18 +1297,21 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#results">Results</a></li>
         <li><a href="#team">Team</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#feedback">Feedback</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </footer>
 
 <script>
+document.documentElement.classList.replace('no-js','js');
 // ── Cursor ──────────────────────────────────────────────
 const $c = document.getElementById('cursor');
 const $r = document.getElementById('cursorRing');
 let mx=0, my=0, rx=0, ry=0;
 document.addEventListener('mousemove', e => {
     mx=e.clientX; my=e.clientY;
+    document.body.classList.add('cur-on');
     $c.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`;
 });
 (function raf(){
@@ -1282,6 +1340,8 @@ const $hb=document.getElementById('hamburger');
 const $nl=document.getElementById('navLinks');
 $hb.addEventListener('click',()=>{
     const o=$nl.classList.toggle('open');
+    $hb.setAttribute('aria-expanded', o);
+    document.body.style.overflow = o ? 'hidden' : '';
     const [s0,s1,s2]=$hb.querySelectorAll('span');
     s0.style.transform=o?'rotate(45deg) translate(4px,4px)':'';
     s1.style.opacity=o?'0':'';
@@ -1289,6 +1349,8 @@ $hb.addEventListener('click',()=>{
 });
 $nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
     $nl.classList.remove('open');
+    $hb.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
     $hb.querySelectorAll('span').forEach(s=>{s.style.transform='';s.style.opacity='';});
 }));
 
@@ -1327,6 +1389,7 @@ function toggleYear(header){
     const body = header.nextElementSibling;
     const isOpen = body.classList.contains('open');
     header.classList.toggle('open', !isOpen);
+    header.setAttribute('aria-expanded', !isOpen);
     body.classList.toggle('open', !isOpen);
 }
 
@@ -1369,34 +1432,57 @@ const galleryPhotos = [
 
 const grid = document.getElementById('galleryGrid');
 galleryPhotos.forEach((photo, i) => {
-    const item = document.createElement('div');
+    const item = document.createElement('button');
+    item.type = 'button';
     item.className = 'g-item';
+    item.setAttribute('aria-label', `Open photo ${i+1}`);
     const img = document.createElement('img');
-    img.src = `images/${photo}`;
-    img.alt = `Oarigin Performance International — rowing photo ${i+1}`;
+    img.src = `images/thumbs/${photo.replace('.jpg','.webp')}`;
+    img.alt = `Rowing athletes on the water and at regattas, photo ${i+1}`;
     img.loading = 'lazy';
+    img.decoding = 'async';
     item.appendChild(img);
     item.addEventListener('click', () => openLb(i));
     grid.appendChild(item);
 });
 
+document.getElementById('gMore').addEventListener('click', e => {
+    const g = document.getElementById('galleryGrid');
+    const c = g.classList.toggle('collapsed');
+    e.currentTarget.textContent = c ? 'Show All Photos' : 'Show Fewer Photos';
+    e.currentTarget.setAttribute('aria-expanded', !c);
+    if (c) document.getElementById('gallery').scrollIntoView();
+});
+
 // ── Lightbox ─────────────────────────────────────────────
-let lbIndex = 0;
+let lbIndex = 0, lbReturn = null;
+function lbShow() {
+    const im = document.getElementById('lbImg');
+    im.src = `images/${galleryPhotos[lbIndex]}`;
+    im.alt = `Rowing athletes on the water and at regattas, photo ${lbIndex+1} of ${galleryPhotos.length}`;
+}
 function openLb(i) {
-    lbIndex = i;
-    document.getElementById('lbImg').src = `images/${galleryPhotos[i]}`;
+    lbIndex = i; lbReturn = document.activeElement; lbShow();
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
+    document.getElementById('lbClose').focus();
 }
 function closeLb() {
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
+    if (lbReturn) lbReturn.focus();
 }
 function lbNav(dir) {
     lbIndex = (lbIndex + dir + galleryPhotos.length) % galleryPhotos.length;
-    document.getElementById('lbImg').src = `images/${galleryPhotos[lbIndex]}`;
+    lbShow();
 }
 document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Tab') {
+        const f = [...document.querySelectorAll('#lightbox button')];
+        const k = f.indexOf(document.activeElement);
+        e.preventDefault(); f[(k + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
+    }
     if (e.key === 'Escape') closeLb();
     if (e.key === 'ArrowRight') lbNav(1);
     if (e.key === 'ArrowLeft') lbNav(-1);
@@ -1406,48 +1492,6 @@ document.getElementById('lightbox').addEventListener('click', e => {
 });
 
 // Contact: mailto link only
-
-// ── Results filter ───────────────────────────────────────
-(function() {
-    const btns = document.querySelectorAll('.rf-btn');
-    const blocks = document.querySelectorAll('.year-block');
-
-    function apply() {
-        const yr = document.querySelector('.rf-btn[data-filter].active')?.dataset.filter || 'all';
-        const med = document.querySelector('.rf-btn[data-medal].active')?.dataset.medal || null;
-        blocks.forEach(b => {
-            const show = yr === 'all' || b.dataset.year === yr;
-            b.classList.toggle('hf', !show);
-            if (show && med) {
-                const hdr = b.querySelector('.year-header');
-                const body = b.querySelector('.year-body');
-                hdr.classList.add('open'); body.classList.add('open');
-                b.querySelectorAll('.event-card').forEach(c => {
-                    const has = med === 'gold'
-                        ? c.querySelector('.medal.gold')
-                        : c.querySelector('.medal.gold,.medal.silver,.medal.bronze');
-                    c.classList.toggle('hf', !has);
-                });
-            } else if (show) {
-                b.querySelectorAll('.event-card').forEach(c => c.classList.remove('hf'));
-            }
-        });
-    }
-
-    btns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            if (btn.hasAttribute('data-filter')) {
-                document.querySelectorAll('.rf-btn[data-filter]').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-            } else {
-                const was = btn.classList.contains('active');
-                document.querySelectorAll('.rf-btn[data-medal]').forEach(b => b.classList.remove('active'));
-                if (!was) btn.classList.add('active');
-            }
-            apply();
-        });
-    });
-})();
 
 // ── Feedback form ────────────────────────────────────────
 (function(){
