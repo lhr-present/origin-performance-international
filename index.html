@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emre Cikinci — Oarigin Performance International</title>
-    <meta name="description" content="Former Turkish National Team rower turned elite rowing coach. Emre Cikinci — Oarigin Performance International, South Florida.">
+    <title>Oarigin Performance International — Rowing Performance Coaching</title>
+    <meta name="description" content="Oarigin Performance International is a rowing performance coaching company in South Florida. Individual, crew and online coaching for youth and junior athletes, plus club consulting.">
     <link rel="canonical" href="https://oariginperformanceinternational.com/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://oariginperformanceinternational.com/">
-    <meta property="og:title" content="Emre Cikinci — Oarigin Performance International">
-    <meta property="og:description" content="Former Turkish National Team rower turned elite rowing coach. Emre Cikinci — Oarigin Performance International, South Florida.">
+    <meta property="og:title" content="Oarigin Performance International — Rowing Performance Coaching">
+    <meta property="og:description" content="Oarigin Performance International is a rowing performance coaching company in South Florida. Individual, crew and online coaching for youth and junior athletes, plus club consulting.">
+    <meta property="og:site_name" content="Oarigin Performance International">
     <meta property="og:image" content="https://oariginperformanceinternational.com/images/IMG-20260416-WA0015.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Emre Cikinci — Oarigin Performance International">
-    <meta name="twitter:description" content="Former Turkish National Team rower turned elite rowing coach. South Florida.">
+    <meta name="twitter:title" content="Oarigin Performance International — Rowing Performance Coaching">
+    <meta name="twitter:description" content="Rowing performance coaching for youth and junior athletes. In person in South Florida, online worldwide.">
     <meta name="twitter:image" content="https://oariginperformanceinternational.com/images/IMG-20260416-WA0015.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsOrganization",
+      "name": "Oarigin Performance International",
+      "url": "https://oariginperformanceinternational.com/",
+      "sport": "Rowing",
+      "description": "Rowing performance coaching company offering individual, crew and online coaching and club consulting.",
+      "email": "emrecikinci@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Palm Beach Gardens", "addressRegion": "FL", "addressCountry": "US" },
+      "areaServed": "Worldwide",
+      "employee": {
+        "@type": "Person",
+        "name": "Emre Cikinci",
+        "jobTitle": "Rowing Coach",
+        "sameAs": "https://www.linkedin.com/in/emrecikinci/"
+      }
+    }
+    </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Ccircle cx='50' cy='50' r='22' fill='%23C9F300'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -227,7 +247,7 @@
         .about-g { display: grid; grid-template-columns: 400px 1fr; gap: 72px; align-items: start; }
         .about-img {
             width: 100%; aspect-ratio: 3/4;
-            background: url('images/IMG-20260416-WA0093.jpg') center top / cover no-repeat;
+            background: url('images/IMG-20260416-WA0094.jpg') center 35% / cover no-repeat;
             position: relative; border: 1px solid var(--border);
         }
         .about-img::after {
@@ -590,6 +610,45 @@
             .fb-row-2 { grid-template-columns: 1fr; }
         }
 
+        /* ── Services ── */
+        #services { border-top: 1px solid var(--border); background: var(--surface); }
+        .services { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+        .svc { background: var(--surface); padding: 40px 32px; transition: background .3s; display: flex; flex-direction: column; }
+        .svc:hover { background: var(--surface-2); }
+        .svc-n { font-family: var(--font-d); font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: .2em; margin-bottom: 22px; }
+        .svc-t { font-family: var(--font-d); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 14px; line-height: 1.4; }
+        .svc-d { font-size: 12px; line-height: 1.8; color: var(--text-muted); }
+        .svc-for { margin-top: auto; padding-top: 22px; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--text-muted); border-top: 1px solid var(--border-light); margin-top: 26px; }
+        .svc-for b { color: var(--accent); font-weight: 400; }
+
+        /* ── Team ── */
+        #team { border-top: 1px solid var(--border); }
+        .team-card { display: grid; grid-template-columns: 420px 1fr; gap: 0; border: 1px solid var(--border); background: var(--surface); }
+        .team-img { min-height: 380px; background: url('images/IMG-20260416-WA0093.jpg') 18% center / cover no-repeat; position: relative; }
+        .team-img::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); }
+        .team-body { padding: 44px 48px; }
+        .team-role { font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+        .team-name { font-family: var(--font-d); font-size: clamp(22px,2.4vw,30px); font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; line-height: 1.05; margin-bottom: 22px; }
+        .team-bio { font-size: 13px; line-height: 1.9; color: var(--text-muted); }
+        .team-bio strong { color: var(--text); font-weight: 500; }
+        .team-bio p + p { margin-top: 16px; }
+        .team-body .creds { margin-top: 26px; }
+        .team-link { display: inline-block; margin-top: 26px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 3px; }
+        .team-link:hover { color: var(--text); border-color: var(--text); }
+        .results-note { font-size: 11px; color: var(--text-muted); letter-spacing: .04em; margin-top: 22px; line-height: 1.8; }
+        @media (max-width: 1100px) {
+            .services { grid-template-columns: repeat(2,1fr); }
+            .team-card { grid-template-columns: 1fr; }
+            .team-img { min-height: 300px; }
+        }
+        @media (max-width: 560px) {
+            .hero-name { font-size: 8.4vw; }
+        }
+        @media (max-width: 768px) {
+            .services { grid-template-columns: 1fr; }
+            .team-body { padding: 32px 24px; }
+        }
+
     </style>
 </head>
 <body>
@@ -600,14 +659,14 @@
 
 <!-- NAV -->
 <nav id="nav">
-    <a href="#hero" class="nav-logo">O<span class="dot">●</span>PI</a>
+    <a href="#hero" class="nav-logo" aria-label="Oarigin Performance International — home">O<span class="dot">●</span>PI</a>
     <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#results">Results</a></li>
+        <li><a href="#team">Team</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#philosophy">Philosophy</a></li>
-        <li><a href="#feedback">Feedback</a></li>
-        <li><a href="#contact" class="nav-cta">Work With Me</a></li>
+        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
     </ul>
     <div class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
@@ -615,21 +674,21 @@
 </nav>
 
 <!-- HERO -->
-<section id="hero" aria-label="Emre Cikinci — elite rowing coach, South Florida">
+<section id="hero" aria-label="Oarigin Performance International — rowing performance coaching">
     <div class="hero-photo"></div>
     <div class="hero-grid-overlay"></div>
     <div class="hero-content">
-        <p class="hero-label">Oarigin Performance International // Rowing Coach</p>
+        <p class="hero-label">Rowing Performance Coaching // South Florida &amp; Online</p>
         <h1 class="hero-name">
-            Emre<br>Cikinci
-            <span class="sub">Oarigin Performance<br>International</span>
+            Oarigin<br>Performance
+            <span class="sub">International</span>
         </h1>
         <p class="hero-tagline">
-            Former Turkish National Team rower. Elite youth and junior rowing coach based in South Florida. Building champions — on the water and in life.
+            Structured, technically grounded coaching for youth and junior rowers, their families, and their clubs. Built on international competitive experience and a proven championship record in US youth rowing.
         </p>
         <div class="hero-actions">
-            <a href="#results" class="btn-p">View Results</a>
-            <a href="#contact" class="btn-s">Work With Me</a>
+            <a href="#services" class="btn-p">Our Services</a>
+            <a href="#contact" class="btn-s">Get in Touch</a>
         </div>
     </div>
 </section>
@@ -637,42 +696,42 @@
 <!-- STATS -->
 <div class="stats" id="statsBar">
     <div class="stat">
-        <span class="stat-n" data-target="200">0</span>
-        <span class="stat-l">Career Medals as Athlete</span>
+        <span class="stat-n" data-target="36">0</span>
+        <span class="stat-l">Championship Medals Since 2023</span>
     </div>
     <div class="stat">
-        <span class="stat-n" data-target="10">0</span>
-        <span class="stat-l">Years Turkish National Team</span>
-    </div>
-    <div class="stat">
-        <span class="stat-n" data-target="4">0</span>
-        <span class="stat-l">Youth National Titles (as Coach)</span>
+        <span class="stat-n" data-target="23">0</span>
+        <span class="stat-l">Gold Medals</span>
     </div>
     <div class="stat">
         <span class="stat-n" data-target="1">0</span>
-        <span class="stat-l">CanAmex National Team Gold</span>
+        <span class="stat-l">CanAmex US National Team Gold</span>
+    </div>
+    <div class="stat">
+        <span class="stat-n" data-target="10+">0</span>
+        <span class="stat-l">Years National Team Experience on Staff</span>
     </div>
 </div>
 
 <!-- MARQUEE -->
 <div class="marquee">
     <div class="m-track">
-        <span class="m-item"><span class="dot">●</span>Turkish National Team</span>
-        <span class="m-item"><span class="dot">●</span>NPBRC Head Coach</span>
+        <span class="m-item"><span class="dot">●</span>Youth &amp; Junior Development</span>
+        <span class="m-item"><span class="dot">●</span>Sculling &amp; Sweep</span>
         <span class="m-item"><span class="dot">●</span>USRowing Youth Nationals</span>
-        <span class="m-item"><span class="dot">●</span>FSRA State Champion</span>
+        <span class="m-item"><span class="dot">●</span>FSRA State Champions</span>
         <span class="m-item"><span class="dot">●</span>CanAmex Gold</span>
-        <span class="m-item"><span class="dot">●</span>200+ Career Medals</span>
         <span class="m-item"><span class="dot">●</span>D1 College Placements</span>
-        <span class="m-item"><span class="dot">●</span>South Florida Rowing</span>
-        <span class="m-item"><span class="dot">●</span>Turkish National Team</span>
-        <span class="m-item"><span class="dot">●</span>NPBRC Head Coach</span>
+        <span class="m-item"><span class="dot">●</span>Online Coaching Worldwide</span>
+        <span class="m-item"><span class="dot">●</span>Club Consulting</span>
+        <span class="m-item"><span class="dot">●</span>Youth &amp; Junior Development</span>
+        <span class="m-item"><span class="dot">●</span>Sculling &amp; Sweep</span>
         <span class="m-item"><span class="dot">●</span>USRowing Youth Nationals</span>
-        <span class="m-item"><span class="dot">●</span>FSRA State Champion</span>
+        <span class="m-item"><span class="dot">●</span>FSRA State Champions</span>
         <span class="m-item"><span class="dot">●</span>CanAmex Gold</span>
-        <span class="m-item"><span class="dot">●</span>200+ Career Medals</span>
         <span class="m-item"><span class="dot">●</span>D1 College Placements</span>
-        <span class="m-item"><span class="dot">●</span>South Florida Rowing</span>
+        <span class="m-item"><span class="dot">●</span>Online Coaching Worldwide</span>
+        <span class="m-item"><span class="dot">●</span>Club Consulting</span>
     </div>
 </div>
 
@@ -682,32 +741,100 @@
         <div class="s-head rv">
             <div>
                 <div class="s-lbl">01 // About</div>
-                <h2 class="s-title">From National Team<br>Athlete to Elite Coach</h2>
+                <h2 class="s-title">Performance Coaching<br>Built on Elite Experience</h2>
             </div>
         </div>
         <div class="about-g">
             <div class="rvl">
-                <div class="about-img">
-                    <div class="about-img-tag">Emre Cikinci</div>
+                <div class="about-img" role="img" aria-label="Crew on the podium with medals">
+                    <div class="about-img-tag">South Florida</div>
                 </div>
             </div>
             <div class="rv">
                 <div class="bio">
-                    <p><strong>Emre Cikinci</strong> is a former elite international rower who represented the Turkish National Rowing Team for over a decade, accumulating more than 200 national and international medals across his competitive career. His firsthand experience at the highest levels of the sport — the technical demands, the competitive pressure, and the physical and mental discipline required — forms the foundation of his coaching approach.</p>
-                    <p>Now based in South Florida, Emre coaches at the <strong>North Palm Beach Rowing Club (NPBRC)</strong>, where he works with youth and junior athletes across sculling and sweep disciplines. Under his guidance, NPBRC athletes have become consistent podium finishers at the Florida State Rowing Association Championships and USRowing Southeast Youth Championships, with multiple athletes qualifying for and medalling at the <strong>USRowing Youth National Championships</strong>.</p>
-                    <p>In 2024, his athletes earned a spot on the <strong>US National Team</strong> for the CanAmex competition, where they won Gold in the Women's Youth 4X — a landmark achievement. Beyond competition results, Emre takes pride in developing athletes who go on to earn <strong>Division I rowing scholarships</strong> at universities across the United States, including the University of Tennessee.</p>
-                    <p>Through <strong>Oarigin Performance International</strong>, Emre brings his elite background and coaching expertise to athletes worldwide — individually and in groups, in-person and online.</p>
+                    <p><strong>Oarigin Performance International</strong> is a rowing performance coaching company based in Palm Beach Gardens, Florida. We work with youth and junior athletes, their families, and rowing clubs, individually and in groups, in person and online.</p>
+                    <p>Our coaching combines experience gained at the highest levels of international competition with a structured, athlete-centered development process. We coach across <strong>sculling and sweep</strong> disciplines, with a clear focus on technique, physical preparation, and competitive mindset.</p>
+                    <p>Athletes coached by our staff have become consistent podium finishers at the <strong>Florida State Rowing Association Championships</strong> and the <strong>USRowing Southeast Youth Championships</strong>, have medalled at the <strong>USRowing Youth National Championships</strong>, and in 2024 won Gold for the <strong>US National Team</strong> at CanAmex. Several have gone on to row at <strong>NCAA Division I</strong> programs.</p>
+                    <p>Our goal is simple. We help every athlete reach a level they did not know they could reach, and we prepare them for a long future in the sport.</p>
                 </div>
                 <ul class="creds">
-                    <li>Turkish National Rowing Team — 10+ Years as Elite Competitor</li>
-                    <li>200+ National &amp; International Medals as an Athlete</li>
-                    <li>Rowing Coach — North Palm Beach Rowing Club (NPBRC), South Florida</li>
-                    <li>CanAmex National Team Coach — Women's Youth 4X Gold (2024)</li>
-                    <li>USRowing Youth National Championship Medalist Coach (2023–2025)</li>
-                    <li>Multiple FSRA State Championship-winning Coach (2023–2026)</li>
-                    <li>D1 College Placement Coach — University of Tennessee Rowing &amp; others</li>
-                    <!-- Add education credentials here when available -->
+                    <li>Coaching staff with 10+ years of international competition experience</li>
+                    <li>Youth and junior development across sculling and sweep</li>
+                    <li>Championship results at FSRA, USRowing Southeast Youth and Youth Nationals (2023–2026)</li>
+                    <li>CanAmex US National Team, Women's Youth 4X Gold (2024)</li>
+                    <li>Athlete placements in NCAA Division I rowing, including the University of Tennessee</li>
+                    <li>In-person coaching in South Florida and online coaching worldwide</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <div class="si">
+        <div class="s-head rv">
+            <div>
+                <div class="s-lbl">02 // Services</div>
+                <h2 class="s-title">What<br>We Offer</h2>
+            </div>
+            <p style="max-width:340px;color:var(--text-muted);font-size:12px;line-height:1.85;">
+                Every program is built around the athlete or organization we work with. Contact us to discuss the format that fits your goals.
+            </p>
+        </div>
+        <div class="services rv">
+            <div class="svc">
+                <span class="svc-n">01</span>
+                <h3 class="svc-t">Individual Coaching</h3>
+                <p class="svc-d">One-to-one coaching built around the athlete's physiology, technical level, and competition calendar. Clear goals, structured progression, and regular feedback.</p>
+                <p class="svc-for"><b>For</b> · Youth &amp; junior athletes</p>
+            </div>
+            <div class="svc">
+                <span class="svc-n">02</span>
+                <h3 class="svc-t">Crew &amp; Group Coaching</h3>
+                <p class="svc-d">Coaching for small groups and crews in sculling and sweep boats. The focus is on shared rhythm, boat-moving technique, and race preparation.</p>
+                <p class="svc-for"><b>For</b> · Crews &amp; training groups</p>
+            </div>
+            <div class="svc">
+                <span class="svc-n">03</span>
+                <h3 class="svc-t">Online Coaching</h3>
+                <p class="svc-d">Remote programming and technical review for athletes anywhere in the world. Training plans, video analysis, and ongoing communication with our coaching staff.</p>
+                <p class="svc-for"><b>For</b> · Athletes worldwide</p>
+            </div>
+            <div class="svc">
+                <span class="svc-n">04</span>
+                <h3 class="svc-t">Club Consulting</h3>
+                <p class="svc-d">Support for rowing clubs and programs that want to raise their performance standards. We help with athlete development pathways, training structure, and coaching practice.</p>
+                <p class="svc-for"><b>For</b> · Clubs &amp; programs</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+    <div class="si">
+        <div class="rv">
+            <div class="s-lbl">03 // Our Approach</div>
+            <blockquote class="phil-quote">
+                &ldquo;Every athlete has a ceiling they cannot see yet. Our job is to help them <em>break through it</em> — technically, physically, and mentally.&rdquo;
+            </blockquote>
+        </div>
+        <div class="pillars rv">
+            <div class="pillar">
+                <span class="p-icon">◎</span>
+                <h3 class="p-title">Athlete-First Development</h3>
+                <p class="p-text">Every program is built around the individual: their physiology, their timeline, and their goals. There is no universal template. Understanding each athlete is where our coaching starts.</p>
+            </div>
+            <div class="pillar">
+                <span class="p-icon">◈</span>
+                <h3 class="p-title">Technical Mastery</h3>
+                <p class="p-text">Rowing is a technique sport before it is a fitness sport. Clean, efficient movement built on solid fundamentals is the non-negotiable foundation. Power built on poor mechanics is wasted potential.</p>
+            </div>
+            <div class="pillar">
+                <span class="p-icon">◇</span>
+                <h3 class="p-title">Long-Term Thinking</h3>
+                <p class="p-text">Results matter, and so does what comes after. Our athletes progress to NCAA Division I programs, national team selection, and a lifelong relationship with the sport. We choose sustainable development over short-term gains.</p>
             </div>
         </div>
     </div>
@@ -718,11 +845,11 @@
     <div class="si">
         <div class="s-head rv">
             <div>
-                <div class="s-lbl">02 // Results</div>
-                <h2 class="s-title">Competition<br>Record</h2>
+                <div class="s-lbl">04 // Results</div>
+                <h2 class="s-title">Track<br>Record</h2>
             </div>
             <p style="max-width:320px;color:var(--text-muted);font-size:12px;line-height:1.85;">
-                Results from Emre's athletes at FSRA State Championships, USRowing Southeast Youth, and USRowing Youth Nationals — 2023 to 2026.
+                Results achieved by athletes coached by our staff at the North Palm Beach Rowing Club. FSRA State Championships, USRowing Southeast Youth, and USRowing Youth Nationals, 2023 to 2026.
             </p>
         </div>
 
@@ -916,16 +1043,49 @@
     </div>
 </section>
 
+<!-- TEAM -->
+<section id="team">
+    <div class="si">
+        <div class="s-head rv">
+            <div>
+                <div class="s-lbl">05 // Team</div>
+                <h2 class="s-title">Our<br>Coaching Staff</h2>
+            </div>
+            <p style="max-width:320px;color:var(--text-muted);font-size:12px;line-height:1.85;">
+                Our coaches bring first-hand experience of international competition to every athlete they work with.
+            </p>
+        </div>
+        <div class="team-card rv">
+            <div class="team-img" role="img" aria-label="Emre Cikinci with athletes at a regatta"></div>
+            <div class="team-body">
+                <p class="team-role">Rowing Coach</p>
+                <h3 class="team-name">Emre Cikinci</h3>
+                <div class="team-bio">
+                    <p>Emre is a former member of the <strong>Turkish National Rowing Team</strong>, where he competed at elite level for more than ten years and won over 200 national and international medals.</p>
+                    <p>He coaches youth and junior athletes in sculling and sweep at the <strong>North Palm Beach Rowing Club (NPBRC)</strong> in South Florida. He coached the Women's Youth 4X that won Gold for the US National Team at CanAmex in 2024.</p>
+                </div>
+                <ul class="creds">
+                    <li>Turkish National Rowing Team, 10+ years as an elite competitor</li>
+                    <li>CanAmex National Team Coach, Women's Youth 4X Gold (2024)</li>
+                    <li>USRowing Youth National Championship medalist coach (2023–2025)</li>
+                    <li>FSRA State Championship-winning coach (2023–2026)</li>
+                </ul>
+                <a class="team-link" href="https://www.linkedin.com/in/emrecikinci/" target="_blank" rel="noopener">LinkedIn Profile →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- GALLERY -->
 <section id="gallery">
     <div class="si">
         <div class="s-head rv">
             <div>
-                <div class="s-lbl">03 // Gallery</div>
+                <div class="s-lbl">06 // Gallery</div>
                 <h2 class="s-title">On the Water<br>&amp; On the Podium</h2>
             </div>
             <p style="max-width:300px;color:var(--text-muted);font-size:12px;line-height:1.85;">
-                Moments from regattas, championship days, and the everyday work that builds champions.
+                Regattas, championship days, and the daily work behind our athletes&#39; results.
             </p>
         </div>
     </div>
@@ -942,48 +1102,19 @@
     <span class="lb-nav lb-next" onclick="lbNav(1)">›</span>
 </div>
 
-<!-- PHILOSOPHY -->
-<section id="philosophy">
-    <div class="si">
-        <div class="rv">
-            <div class="s-lbl">04 // Philosophy</div>
-            <blockquote class="phil-quote">
-                &ldquo;Every athlete has a ceiling they cannot see yet. My job is to help them <em>break through it</em> — technically, physically, and mentally.&rdquo;
-            </blockquote>
-        </div>
-        <div class="pillars rv">
-            <div class="pillar">
-                <span class="p-icon">◎</span>
-                <h3 class="p-title">Athlete-First Development</h3>
-                <p class="p-text">Every program is built around the individual — their physiology, their timeline, their goals. There is no universal template. Understanding what makes each athlete tick is where coaching starts.</p>
-            </div>
-            <div class="pillar">
-                <span class="p-icon">◈</span>
-                <h3 class="p-title">Technical Mastery</h3>
-                <p class="p-text">Rowing is a technique sport before it is a fitness sport. Clean, efficient movement built on solid fundamentals is the non-negotiable foundation. Power built on poor mechanics is wasted potential.</p>
-            </div>
-            <div class="pillar">
-                <span class="p-icon">◇</span>
-                <h3 class="p-title">Long-Term Thinking</h3>
-                <p class="p-text">Results matter — but so does what comes after. Emre's athletes graduate to D1 programs, national teams, and lifelong relationships with the sport. Sustainable development over short-term gains, every time.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact">
     <div class="si">
         <div class="s-head rv">
             <div>
-                <div class="s-lbl">05 // Contact</div>
-                <h2 class="s-title">Work With<br>Emre</h2>
+                <div class="s-lbl">07 // Contact</div>
+                <h2 class="s-title">Work<br>With Us</h2>
             </div>
         </div>
         <div class="contact-g">
             <div class="rvl">
                 <p class="contact-lede">
-                    Whether you're a junior athlete looking for elite coaching, a parent exploring training options, or a club seeking consulting — reach out directly. All enquiries are handled personally.
+                    Whether you are an athlete looking for structured coaching, a parent exploring training options, or a club seeking consulting support, we would like to hear from you. Every enquiry is reviewed by our coaching staff.
                 </p>
                 <div class="c-rows">
                     <div class="c-row">
@@ -995,34 +1126,30 @@
                         <span>Palm Beach Gardens, Florida, USA</span>
                     </div>
                     <div class="c-row">
-                        <span class="c-lbl">Club</span>
-                        <span>North Palm Beach Rowing Club (NPBRC)</span>
+                        <span class="c-lbl">In Person</span>
+                        <span>South Florida</span>
                     </div>
                     <div class="c-row">
-                        <span class="c-lbl">Remote</span>
-                        <span>Online coaching available worldwide</span>
+                        <span class="c-lbl">Online</span>
+                        <span>Available worldwide</span>
                     </div>
                     <div class="c-row">
                         <span class="c-lbl">Response</span>
                         <span>Within 48 hours</span>
                     </div>
-                    <div class="c-row">
-                        <span class="c-lbl">LinkedIn</span>
-                        <span><a href="https://www.linkedin.com/in/emrecikinci/" target="_blank" rel="noopener">linkedin.com/in/emrecikinci</a></span>
-                    </div>
                 </div>
             </div>
             <div class="rv">
                 <div class="email-card">
-                    <div class="ec-label">Direct Email</div>
+                    <div class="ec-label">Enquiries</div>
                     <a class="ec-email" href="mailto:emrecikinci@gmail.com?subject=Coaching%20Enquiry">
                         emrecikinci@gmail.com
                     </a>
                     <div class="ec-divider"></div>
                     <p class="ec-note">
-                        Tell me about your goals, your current level, and what you&#39;re hoping to achieve. All enquiries are handled personally — you&#39;ll hear back within 48 hours.
+                        Tell us about the athlete or program, the current level, and the goals you want to reach. We reply to every enquiry within 48 hours.
                     </p>
-                    <a class="btn-p" href="mailto:emrecikinci@gmail.com?subject=Coaching%20Enquiry&body=Hi%20Emre%2C%0D%0A%0D%0AName%3A%20%0D%0AAge%20%2F%20Level%3A%20%0D%0ACurrent%20club%20(if%20any)%3A%20%0D%0AWhat%20I&#39;m%20hoping%20to%20achieve%3A%20%0D%0A%0D%0AThanks%2C">
+                    <a class="btn-p" href="mailto:emrecikinci@gmail.com?subject=Coaching%20Enquiry&body=Hello%20Oarigin%20Performance%20team%2C%0D%0A%0D%0AName%3A%20%0D%0AAge%20%2F%20Level%3A%20%0D%0ACurrent%20club%20(if%20any)%3A%20%0D%0AService%20of%20interest%3A%20%0D%0AGoals%3A%20%0D%0A%0D%0AThank%20you%2C">
                         Compose Email →
                     </a>
                 </div>
@@ -1036,20 +1163,20 @@
     <div class="si">
         <div class="s-head rv">
             <div>
-                <div class="s-lbl">06 // Feedback</div>
-                <h2 class="s-title">Speak<br>To Emre</h2>
+                <div class="s-lbl">08 // Feedback</div>
+                <h2 class="s-title">Share Your<br>Experience</h2>
             </div>
         </div>
         <div class="fb-g">
             <div class="rvl">
                 <p class="fb-lede">
-                    Worked with Emre? Watched a session? Want to share a thought, an experience, or a thank-you? Just type your name and a message — that's it. Everything else is optional.
+                    Have you trained with us, watched a session, or worked with our staff? We welcome your feedback. Only your name and a message are required.
                 </p>
                 <ul class="fb-bullets">
                     <li>Just a name and a message — nothing else required</li>
                     <li>Email and profile picture are entirely optional</li>
                     <li>Open to athletes, parents, fellow coaches, and visitors</li>
-                    <li>Every message lands directly in Emre's personal inbox</li>
+                    <li>Every message is read by our coaching staff</li>
                 </ul>
             </div>
             <div class="rv">
@@ -1087,7 +1214,7 @@
                     <div class="fb-divider"></div>
                     <div class="ff">
                         <label for="fbMessage">Your Feedback</label>
-                        <textarea id="fbMessage" name="message" required maxlength="2000" placeholder="Share your experience, thoughts, or a message for Emre..."></textarea>
+                        <textarea id="fbMessage" name="message" required maxlength="2000" placeholder="Share your experience or a message for our team..."></textarea>
                     </div>
 
                     <button type="submit" class="cf-submit">Send Feedback →</button>
@@ -1097,7 +1224,7 @@
                     <div class="fb-success-icon">◎</div>
                     <h3 class="fb-success-title">Feedback Sent</h3>
                     <p class="fb-success-text">
-                        Thanks for taking the time. Your message is on its way to Emre — expect a reply within 48 hours.
+                        Thank you for your feedback. If you included your email, we will reply within 48 hours.
                     </p>
                     <a href="#feedback" id="fbAgain" class="btn-s">Send Another</a>
                 </div>
@@ -1109,11 +1236,12 @@
 <!-- FOOTER -->
 <footer>
     <div class="f-logo">Oarigin<span class="dot">●</span>Performance International</div>
-    <p class="f-copy">&copy; 2026 Emre Cikinci — oariginperformanceinternational.com</p>
+    <p class="f-copy">&copy; 2026 Oarigin Performance International. All rights reserved.</p>
     <ul class="f-nav">
         <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#results">Results</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#team">Team</a></li>
         <li><a href="#feedback">Feedback</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
@@ -1133,7 +1261,7 @@ document.addEventListener('mousemove', e => {
     $r.style.transform = `translate(${rx}px,${ry}px) translate(-50%,-50%)`;
     requestAnimationFrame(raf);
 })();
-document.querySelectorAll('a,button,.g-item,.year-header,.pillar').forEach(el=>{
+document.querySelectorAll('a,button,.g-item,.year-header,.pillar,.svc').forEach(el=>{
     el.addEventListener('mouseenter',()=>$r.classList.add('hov'));
     el.addEventListener('mouseleave',()=>$r.classList.remove('hov'));
 });
@@ -1203,7 +1331,7 @@ function toggleYear(header){
 }
 
 // ── Gallery ──────────────────────────────────────────────
-// Curated selection of 28 photos from the 94 available
+// Curated gallery selection
 const galleryPhotos = [
     'IMG-20260416-WA0011.jpg',
     'IMG-20260416-WA0013.jpg',
@@ -1245,7 +1373,7 @@ galleryPhotos.forEach((photo, i) => {
     item.className = 'g-item';
     const img = document.createElement('img');
     img.src = `images/${photo}`;
-    img.alt = `Emre Cikinci coaching — photo ${i+1}`;
+    img.alt = `Oarigin Performance International — rowing photo ${i+1}`;
     img.loading = 'lazy';
     item.appendChild(img);
     item.addEventListener('click', () => openLb(i));
