@@ -33,12 +33,17 @@
       "areaServed": "Worldwide",
       "image": "https://oariginperformanceinternational.com/images/og.jpg",
       "logo": "https://oariginperformanceinternational.com/images/brand/oarigin-logo-navy.png",
-      "employee": {
+      "employee": [{
         "@type": "Person",
         "name": "Emre Cikinci",
         "jobTitle": "Rowing Coach",
         "sameAs": "https://www.linkedin.com/in/emrecikinci/"
-      }
+      }, {
+        "@type": "Person",
+        "name": "Bennett Rossell",
+        "jobTitle": "Rowing Coach",
+        "sameAs": "https://www.linkedin.com/in/bennett-rossell/"
+      }]
     }
     </script>
     <link rel="icon" type="image/png" sizes="32x32" href="images/brand/favicon-32.png">
@@ -716,6 +721,22 @@
             .rv, .rvl, .hero-label, .hero-name, .hero-tagline, .hero-actions { opacity: 1 !important; transform: none !important; }
         }
 
+        /* ── Team: additional coach cards ── */
+        .team-card + .team-card { margin-top: 24px; }
+        .team-img.team-img--bennett { background-image: url('images/team/bennett-rossell-headshot.jpg'); background-position: center 22%; }
+        .team-media { display: flex; flex-direction: column; gap: 4px; background: var(--bg); }
+        .team-img.team-img--bennett { min-height: 0; aspect-ratio: 4/4.2; }
+        .team-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+        .team-photos img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center 30%; display: block; }
+        @media (max-width: 1100px) and (min-width: 481px) {
+            .team-media { display: grid; grid-template-columns: 1fr 2fr; }
+            .team-img.team-img--bennett { aspect-ratio: auto; min-height: 0; height: 100%; }
+            .team-photos img { aspect-ratio: 4/5; height: 100%; }
+        }
+        @media (max-width: 480px) { .team-img.team-img--bennett { aspect-ratio: 16/10; } }
+        .team-link--2 { margin-left: 24px; }
+        @media (max-width: 480px) { .team-link--2 { margin-left: 0; display: table; } }
+
     </style>
 </head>
 <body>
@@ -1144,6 +1165,31 @@
                     <li>FSRA State Championship-winning coach (2023–2026)</li>
                 </ul>
                 <a class="team-link" href="https://www.linkedin.com/in/emrecikinci/" target="_blank" rel="noopener noreferrer">LinkedIn Profile →</a>
+            </div>
+        </div>
+
+        <div class="team-card rv">
+            <div class="team-media">
+                <div class="team-img team-img--bennett" role="img" aria-label="Portrait of Bennett Rossell"></div>
+                <div class="team-photos">
+                    <img src="images/team/bennett-rossell-coastal.jpg" alt="Bennett Rossell coxing in a coastal rowing race" width="768" height="513" loading="lazy">
+                    <img src="images/team/bennett-rossell-crew.jpg" alt="Bennett Rossell with a crew after a regatta" width="400" height="368" loading="lazy">
+                </div>
+            </div>
+            <div class="team-body">
+                <p class="team-role">Rowing Coach</p>
+                <h3 class="team-name">Bennett Rossell</h3>
+                <div class="team-bio">
+                    <p>Bennett is a Florida-raised rower from <strong>Palm City</strong>. He competed as a coxswain for the men's rowing team at <strong>Stetson University</strong>, where he studied economics.</p>
+                    <p>In 2021 he represented the <strong>United States</strong> at the World Rowing Coastal Championships and Beach Sprint Finals in Oeiras, Portugal. He was the first Stetson rower to compete at a World Rowing Championships.</p>
+                </div>
+                <ul class="creds">
+                    <li>Team USA, World Rowing Coastal Championships &amp; Beach Sprint Finals (2021)</li>
+                    <li>First Stetson University rower to compete at a World Rowing Championships</li>
+                    <li>Stetson University Men's Rowing, coxswain</li>
+                </ul>
+                <a class="team-link" href="https://www.linkedin.com/in/bennett-rossell/" target="_blank" rel="noopener noreferrer">LinkedIn Profile →</a>
+                <a class="team-link team-link--2" href="https://gohatters.com/news/2021/9/23/mens-rowing-bennett-rossell-set-to-represent-hatters-united-states-in-world-rowing-championships" target="_blank" rel="noopener noreferrer">Stetson Athletics Feature →</a>
             </div>
         </div>
     </div>
